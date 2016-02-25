@@ -2,4 +2,28 @@
 $mobilebodybreakingpoint: 640px;
 body{
 	font-family: 'Droid Sans', sans-serif;
+	background-color: #F2F2F2;
 }
+.nopadding{padding: 0;}
+.maindiv{padding: 0;background-color: #F2F2F2;}
+.homeblock{padding: 0; background-color: #FFFFFF;}
+.hbheader_date {
+    padding: 0;
+}
+.hbheader_date h6{
+font-size: 0.80rem;
+}
+.homeblock_header{
+padding: 0px 0px 10px 0;
+border-bottom: 1px inset #CCC;
+}
+.hbheader_category{
+	margin-top: -10px;
+	    padding: 0;
+}
+.hbheader_category a{
+	float: left;
+	text-align: center;
+	color: #ffffff;
+}
+.hbimage{padding: 0;}

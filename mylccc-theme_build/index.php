@@ -13,44 +13,70 @@
  */
 
 get_header(); ?>
+<div class="small-12 medium-12 large-12 columns maindiv">
+	<div class="small-12 medium-8 large-8 columns nopadding">
+					<div id="primary" class="content-area">
+								<main id="main" class="site-main" role="main">
+												<?php
+												// The Query
+														$args = array(
+														'post_type' => 'post',
+														'posts_per_page' => '12'	
+														);
+														$the_main_query = new WP_Query( $args );
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+														// The Loop
+														if ( $the_main_query->have_posts() ) {
+															echo '<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">';
+															while ( $the_main_query->have_posts() ) {
+																$the_main_query->the_post();
+																echo '<li>';
+																				echo '<div class="small-12 medium-12 large-12 columns homeblock">';	
+																							echo '<div class="small-12 medium-12 large-12 columns homeblock_header">';
+																							foreach((get_the_category()) as $category) {
+    																									$catslug = $category->slug;
+																													$catname = $category->name;
+																											echo '<div class="small-12 medium-12 large-12 columns tag '.$catslug.'">';
+																																echo '<a href="http://mylccc.dev/blog/category/'.$catslug.'">';
+																												echo '<h7>'.$catname.'</h7>';
+																											echo '</a>';
+																											echo '</div>';
+																											}
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+																						echo '<div class="small-12 medium-12 large-12 columns hbheader_date">';
+																											echo '<h6>'.get_the_date('F-d-Y').'</h6>';
+																											echo '</div>';	
+																						echo '</div>';
+																							if ( has_post_thumbnail() ) {
+																										echo '<div class="small-12 medium-12 large-12 columns hbimage">';
+																												the_post_thumbnail();
+																										echo '</div>';
+																							}
+																							echo '<div class="small-12 medium-12 large-12 columns homeblock_content">';				
+																												the_title('<h3>','</h3>');	
+																												the_excerpt();
+																							echo '</div>';
+																							echo '<div class="small-12 medium-12 large-12 columns homeblock_content">';
+																										$link = get_permalink();
+																										echo '<a href="'.$link.'" class="button radius">Continue reading this story</a>';
+																							echo '</div>';
+																			echo '</div>';
+																echo '</li>';							
+															}
+															echo '</ul>';
+																		the_posts_navigation();
+														} else {
+															// no posts found
+														}
+														/* Restore original Post Data */
+														wp_reset_postdata();
+											 ?>
+								</main><!-- #main -->
+					</div><!-- #primary -->
+	</div>
+	<div class="small-12 medium-4 large-4 columns">
+				<?php get_sidebar(); ?>
+	</div>
+</div>	
 <?php
-get_sidebar();
 get_footer();

@@ -8,5 +8,13 @@ Section 3: Header
 Section 4: Navigation
 Section 5: Footer
 Section 6: Text
-*//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides *//*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif}
-/*! Section 3 - Header *//*! Section 4 - Navigation Styles  */footer{padding:5px}
+*//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides */.row{max-width:65.5rem}
+a.button.radius{background-color:#217dbb;font-size:.8875em}/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;background-color:#f2f2f2}
+.nopadding{padding:0}.maindiv{padding:0;background-color:#f2f2f2}.homeblock{padding:0;background-color:#fff}
+.hbheader_date{padding:0}.hbheader_date h6{font-size:.80rem}.homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}
+.hbheader_category{margin-top:-10px;padding:0}.hbheader_category a{float:left;text-align:center;color:#fff}
+.hbimage{padding:0}/*! Section 3 - Header *//*! Section 4 - Navigation Styles  */footer{padding:5px}
+p{word-break:break-word}.tag a h7{color:#fff}.campus-wide{background-color:#000}.students{background-color:#f78536}
+.faculty-student{background-color:#1d556f}.staff-student{background-color:#5c4b77}
+.stocker-arts{background-color:#cd4439}.athletics{background-color:#764f51}.uncategorized{background-color:#003b76}
+.business{background-color:#38817a}.lccc-news{background-color:#620808}.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}

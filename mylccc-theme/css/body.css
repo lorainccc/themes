@@ -1,1 +1,5 @@
-/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif}
+/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;background-color:#f2f2f2}
+.nopadding{padding:0}.maindiv{padding:0;background-color:#f2f2f2}.homeblock{padding:0;background-color:#fff}
+.hbheader_date{padding:0}.hbheader_date h6{font-size:.80rem}.homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}
+.hbheader_category{margin-top:-10px;padding:0}.hbheader_category a{float:left;text-align:center;color:#fff}
+.hbimage{padding:0}
