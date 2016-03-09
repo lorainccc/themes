@@ -1,0 +1,73 @@
+/*!Theme Name: lccccatalog_build
+  Theme URI:    http://www.lorainccc.edu 
+ Description:  Lorain County Community College Child Theme 
+ Author: LCCC Web Team 
+ Author URI: http://www.lorainccc.edu 
+ Template: lccc-framework 
+ Version:1.0.0 
+ License: GNU General Public License v2 or later 
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+ Text Domain:  lccccatalog_build */ 
+ /*!
+Table of Contents
+Color Section : LCCC Color Scheme
+Mixin Section : LCCC Mixins
+Section 1: Foundation
+Section 2: Body
+Section 3: Header
+Section 4: Navigation
+Section 5: Footer
+Section 6: Text
+*/
+/* Color Section : LCCC Color Scheme */
+/*! Mixin Section : LCCC Mixins */
+/*!  Section 1 - Foundation Overrides */
+.breadcrumbs { border-style: none; border-width: 0; display: block; list-style: none; margin-left: 0; overflow: hidden; padding: 0; background-color: transparent; margin-top: -16px; }
+
+/*!  Section 2 - Body Styles */
+body { font-family: 'Droid Sans', sans-serif; }
+
+.maindiv { background: #003366; padding: 0; }
+
+.maincolumn { background: #ffffff; }
+
+.maincontent { padding: 0 1rem; }
+
+.leftwrapper { padding: 0 1rem 0 0; margin: 20px 0 0 0; }
+
+.contentwrapper { margin: 30px 0 0 0; border-left: 1px inset #000000; }
+
+@media screen and (max-width: 640px) { .contentwrapper { border-left: none; } }
+
+input.search-field { width: 85%; }
+
+/*! Section 3 - Header */
+div.cutline { border-top: solid 1px #acacac; border-bottom: solid 1px #acacac; margin-left: auto; margin-right: auto; text-align: center; padding-top: 2px; margin-top: 15px; }
+
+header { border-bottom: 1px inset #000000; padding: 0; }
+
+.headerholder { padding-left: 0; padding-right: 0; }
+
+.site-title { font-size: 1.1em; line-height: 0.9em; color: #202020; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+
+div.cutline a { color: #202020; }
+
+div.cutline a:visited { color: #202020; }
+
+.site-branding img { margin: auto; display: block; vertical-align: middle; margin-top: 10px; }
+
+.entry-header { border-bottom: none; }
+
+/*! Section 4 - Navigation Styles  */
+/* Section 5 - Footer Area */
+footer { padding: 5px; }
+
+.site-info { margin-bottom: 20px; border-top: solid 1px #acacac; border-bottom: solid 1px #acacac; text-align: center; }
+
+.site-info p { margin-bottom: 0; font-size: 1.1rem; }
+
+/*Section 6 Text */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiLCJjb2xvci5zY3NzIiwibWl4aW5zLnNjc3MiLCJmb3VuZGF0aW9uLnNjc3MiLCJib2R5LnNjc3MiLCJoZWFkZXIuc2NzcyIsIm5hdmlnYXRpb24uc2NzcyIsImZvb3Rlci5zY3NzIiwidGV4dC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBOzs7Ozs7Ozs7O0VBVUU7QUNYRix1Q0FBdUM7QUNBdkMsa0NBQWtDO0FDQWxDLHdDQUF3QztBQU94QyxZQUFZLENBQUMsRUFDVCxZQUFZLEVBQUUsSUFBSyxFQUNuQixZQUFZLEVBQUUsQ0FBRSxFQUNoQixPQUFPLEVBQUUsS0FBTSxFQUNmLFVBQVUsRUFBRSxJQUFLLEVBQ2pCLFdBQVcsRUFBRSxDQUFFLEVBQ2YsUUFBUSxFQUFFLE1BQU8sRUFDakIsT0FBTyxFQUFDLENBQUUsRUFDVixnQkFBZ0IsRUFBQyxXQUFZLEVBQzVCLFVBQVUsRUFBRSxLQUFNLEdBQ3JCOztBQ2pCRiwrQkFBK0I7QUFFL0IsSUFBSSxDQUFBLEVBQ0gsV0FBVyxFQUFFLHdCQUF5QixHQUN0Qzs7QUFDRCxRQUFRLENBQUEsRUFBQyxVQUFVLEVBQUMsT0FBUSxFQUFDLE9BQU8sRUFBRSxDQUFFLEdBQUc7O0FBQzNDLFdBQVcsQ0FBQSxFQUFDLFVBQVUsRUFBRSxPQUFRLEdBQUc7O0FBQ25DLFlBQVksQ0FBQSxFQUFDLE9BQU8sRUFBRSxNQUFPLEdBQUc7O0FBQ2hDLFlBQVksQ0FBQSxFQUFFLE9BQU8sRUFBRSxVQUFXLEVBQUMsTUFBTSxFQUFFLFVBQVcsR0FBRzs7QUFDekQsZUFBZSxDQUFBLEVBQUMsTUFBTSxFQUFFLFVBQVcsRUFBQyxXQUFXLEVBQUUsaUJBQWtCLEdBSWxFOztBQUhELE1BQU0sQ0FBTixNQUFNLE1BQU0sU0FBUyxFQUFFLEtBQUssSUFENUIsZUFBZSxDQUFBLEVBRWYsV0FBVyxFQUFFLElBQUssR0FFakI7O0FBQ0QsS0FBSyxhQUFhLENBQUEsRUFBQyxLQUFLLEVBQUUsR0FBSSxHQUFHOztBQ2RqQyx5QkFBeUI7QUFDekIsR0FBRyxRQUFRLENBQUMsRUFDUixVQUFVLEVBQUUsaUJBQWtCLEVBQzlCLGFBQWEsRUFBRSxpQkFBa0IsRUFDakMsV0FBVyxFQUFFLElBQUssRUFDbEIsWUFBWSxFQUFFLElBQUssRUFDbkIsVUFBVSxFQUFFLE1BQU8sRUFDbkIsV0FBVyxFQUFFLEdBQUksRUFDakIsVUFBVSxFQUFFLElBQUssR0FDcEI7O0FBQ0QsTUFBTSxDQUFBLEVBQUUsYUFBYSxFQUFFLGlCQUFrQixFQUFFLE9BQU8sRUFBRSxDQUFFLEdBQUc7O0FBQ3pELGFBQWEsQ0FBQSxFQUFDLFlBQVksRUFBRSxDQUFFLEVBQUUsYUFBYSxFQUFFLENBQUUsR0FBRzs7QUFDcEQsV0FBVyxDQUFBLEVBQUUsU0FBUyxFQUFFLEtBQU0sRUFDMUIsV0FBVyxFQUFFLEtBQU0sRUFDbkIsS0FBSyxFQUFFLE9BQVEsRUFDZixXQUFXLEVBQUUsSUFBSyxFQUNuQixjQUFjLEVBQUUsR0FBSSxFQUNuQixjQUFjLEVBQUUsU0FBVSxHQUM3Qjs7QUFDRCxHQUFHLFFBQVEsQ0FBQyxDQUFDLENBQUEsRUFBRSxLQUFLLEVBQUUsT0FBUSxHQUFHOztBQUNqQyxHQUFHLFFBQVEsQ0FBQyxDQUFDLFFBQVEsQ0FBQSxFQUFFLEtBQUssRUFBRSxPQUFRLEdBQUc7O0FBQ3pDLGNBQWMsQ0FBQyxHQUFHLENBQUEsRUFDbEIsTUFBTSxFQUFFLElBQUssRUFDVCxPQUFPLEVBQUUsS0FBTSxFQUNmLGNBQWMsRUFBRSxNQUFPLEVBQ3ZCLFVBQVUsRUFBRSxJQUFLLEdBQ3BCOztBQUNELGFBQWEsQ0FBQSxFQUFDLGFBQWEsRUFBRSxJQUFLLEdBQUc7O0FDM0JyQyxxQ0FBcUM7QUNBckMsNkJBQTZCO0FBQzdCLE1BQU0sQ0FBQSxFQUFFLE9BQU8sRUFBRSxHQUFJLEdBQUc7O0FBQ3hCLFVBQVUsQ0FBQSxFQUFDLGFBQWEsRUFBRSxJQUFLLEVBQUUsVUFBVSxFQUFFLGlCQUFrQixFQUMzRCxhQUFhLEVBQUUsaUJBQWtCLEVBQUUsVUFBVSxFQUFFLE1BQU8sR0FBRTs7QUFDNUQsVUFBVSxDQUFDLENBQUMsQ0FBQSxFQUFDLGFBQWEsRUFBRSxDQUFFLEVBQUMsU0FBUyxFQUFFLE1BQU8sR0FBRzs7QUNKcEQsbUJBQW1CIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
+
+/*# sourceMappingURL=style.css.map */
