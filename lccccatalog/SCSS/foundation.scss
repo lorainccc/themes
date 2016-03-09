@@ -1,0 +1,18 @@
+/*!  Section 1 - Foundation Overrides */
+// Transitions and breakpoint styles
+// $topbar-transition-speed: 300ms;
+// Using rem-calc for the below breakpoint causes issues with top bar
+$foundationbreakpoint: 800px;
+@media screen and (max-width: $foundationbreakpoint){
+}
+.breadcrumbs {
+    border-style: none;
+    border-width: 0;
+    display: block;
+    list-style: none;
+    margin-left: 0;
+    overflow: hidden;
+    padding:0; 
+    background-color:transparent;
+	    margin-top: -16px;
+ }

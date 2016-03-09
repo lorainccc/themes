@@ -1,0 +1,40 @@
+/*!Theme Name: slilccc_build
+  Theme URI:    http://www.lorainccc.edu 
+ Description:  Lorain County Community College Child Theme 
+ Author: LCCC Web Team 
+ Author URI: http://www.lorainccc.edu 
+ Template: lccc-framework 
+ Version:1.0.0 
+ License: GNU General Public License v2 or later 
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+ Text Domain:  slilccc_build */ 
+ /*!
+Table of Contents
+Color Section : LCCC Color Scheme
+Mixin Section : LCCC Mixins
+Section 1: Foundation
+Section 2: Body
+Section 3: Header
+Section 4: Navigation
+Section 5: Footer
+Section 6: Text
+*//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides */.row{max-width:62rem;margin-left:auto;margin-right:auto}
+/*!  Section 2 - Body Styles */body{font-family:Verdana,Arial,Helvetica,sans-serif;color:#991b1e}
+.maincontent{padding:0;border-top:solid 2px #991b1e;margin-top:10px}.rightwrapper{background-color:#fecc67;vertical-align:top;padding:10px 5px 5px 5px}
+.leftwrapper{background-color:#fecc67;vertical-align:top;padding:10px 5px 5px 5px}
+.leftwrapper ul{list-style:none;font-size:13px}.leftwrapper ul li{display:block;padding:5px 5px 5px 0}
+.leftwrapper img{margin:0 auto;display:block}.contentwrapper{padding-top:10px;padding-bottom:10px}
+.citieslistsidebar{border-right:1px inset #991b1e}.post-meta{list-style:none;margin-left:0}
+.maindiv{padding:0}/*! Section 3 - Header */.headerholder{padding:0}/*! Section 4 - Navigation Styles  */.site-info{padding:0;border-top:solid 2px #991b1e;height:5px}
+h2{font-size:1.2em;color:#991b1e;font-weight:bold}.maincolumn a{overflow-wrap:break-word;word-wrap:break-word;text-decoration:underline}
+.maincolumn a.landmarkweblink{color:#2199e8;overflow-wrap:break-word;word-wrap:break-word;text-decoration:underline}
+.maincolumn a:link{color:#231f20;text-decoration:none;overflow-wrap:break-word;word-wrap:break-word;text-decoration:underline}
+.maincolumn a:visited{color:#231f20;text-decoration:none;overflow-wrap:break-word;word-wrap:break-word;text-decoration:underline}
+p{padding:5px 20px 5px 20px;font-size:.78em;line-height:1.3em;vertical-align:top;color:#000}
+.cities-category-title{text-decoration:underline}.cities-title{font-size:1.2375rem;color:#808285;margin-bottom:-15px}
+.archive-title{margin-top:5px;margin-bottom:0}.landmarkentry-title{font-size:1.3375em;color:#991b1e;font-weight:bold;margin-top:10px}
+.landmarkentry-title a:visited{color:#991b1e;text-decoration:none}.landmarkentry-title a{color:#991b1e;text-decoration:none}
+span.post-title{font-weight:bold}.page-header{text-align:center}.page-header h1{color:#991b1e;font-style:italic;font-weight:bold}
+.page-header h1 a{color:#991b1e}.page-header h1 a:visited{color:#991b1e}.page-header h1 a:link{color:#991b1e}
+ul.citieslist{list-style:none;margin-left:0}@media screen and (min-width:1025px){.large-2{width:19%}
+.large-10{width:80.95%}}

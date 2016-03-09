@@ -1,0 +1,21 @@
+/*!
+Table of Contents
+Color Section : LCCC Color Scheme
+Mixin Section : LCCC Mixins
+Section 1: Foundation
+Section 2: Body
+Section 3: Header
+Section 4: Navigation
+Section 5: Footer
+Section 6: Text
+*//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides */.breadcrumbs{border-style:none;border-width:0;display:block;list-style:none;margin-left:0;overflow:hidden;padding:0;background-color:transparent;margin-top:-16px}
+/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif}
+.maindiv{background:#036;padding:0}.maincolumn{background:#fff}.maincontent{padding:0 1rem}
+.leftwrapper{padding:0 1rem 0 0;margin:20px 0 0 0}.contentwrapper{margin:30px 0 0 0;border-left:1px inset #000}
+input.search-field{width:85%}/*! Section 3 - Header */div.cutline{border-top:solid 1px #acacac;border-bottom:solid 1px #acacac;margin-left:auto;margin-right:auto;text-align:center;padding-top:2px;margin-top:15px}
+header{border-bottom:1px inset #000;padding:0}.headerholder{padding-left:0;padding-right:0}
+.site-title{font-size:1.1em;line-height:.9em;color:#202020;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+div.cutline a{color:#202020}div.cutline a:visited{color:#202020}.site-branding img{margin:auto;display:block;vertical-align:middle;margin-top:10px}
+.entry-header{border-bottom:0}/*! Section 4 - Navigation Styles  */footer{padding:5px}.site-info{margin-bottom:20px;border-top:solid 1px #acacac;border-bottom:solid 1px #acacac;text-align:center}
+.site-info p{margin-bottom:0;font-size:1.1rem}@media screen and (max-width:640px){.contentwrapper{border-left:0}
+}

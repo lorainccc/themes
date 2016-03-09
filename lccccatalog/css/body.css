@@ -1,0 +1,5 @@
+/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif}
+.maindiv{background:#036;padding:0}.maincolumn{background:#fff}.maincontent{padding:0 1rem}
+.leftwrapper{padding:0 1rem 0 0;margin:20px 0 0 0}.contentwrapper{margin:30px 0 0 0;border-left:1px inset #000}
+input.search-field{width:85%}@media screen and (max-width:640px){.contentwrapper{border-left:0}
+}
