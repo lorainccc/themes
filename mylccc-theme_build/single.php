@@ -8,7 +8,8 @@
  */
 
 get_header(); ?>
-
+<div class="small-12 medium-12 large-12 columns contentdiv">
+		<div class="small-12 medium-8 large-8 columns nopadding">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -29,7 +30,11 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	</div>
+		<div class="small-12 medium-4 large-4 columns">
 <?php
-get_sidebar();
+get_sidebar();?>
+	</div>
+</div>
+<?php
 get_footer();

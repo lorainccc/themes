@@ -28,8 +28,13 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row show-for-medium-up">
 		<div class="site-branding">
+			<?php
+			$url = home_url();
+			?>
+			<a href="<?php echo esc_url( $url ); ?>">
 			<img src="<?php echo get_bloginfo('stylesheet_directory');?>/images/MyLCCC-Logo.png">
-		</div><!-- .site-branding -->
+			</a>
+			</div><!-- .site-branding -->
 			</div>
 	  <div class="contain-to-grid sticky">
 	<nav class="top-bar" data-topbar role="navigation">

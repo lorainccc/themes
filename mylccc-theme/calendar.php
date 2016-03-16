@@ -14,7 +14,7 @@ get_header();
 				$todaysevents = '';
 				$args = array(
 							'post_type' => 'lccc_event',
-							'posts_per_page' => 3,
+							'posts_per_page' => -1,
 							//'year' => $year,
 							//'monthnum' => $month,
 							//'day' => $currentDay
@@ -27,7 +27,7 @@ get_header();
 			$the_query = new WP_Query( $args );
 				// The Loop
 				if ( $the_query->have_posts() ) {
-										$todaysevents .= '<ul>';
+										$todaysevents .= '<ul class="todayseventslist">';
 										while ( $the_query->have_posts() ) {
 										$the_query->the_post();
 										$eventdate = event_meta_box_get_meta('event_meta_box_event_start_date_and_time_');	
@@ -35,8 +35,8 @@ get_header();
 										$today_event_month=date("m",$date);
 										$today_event_day=date("j",$date);	
 										if($today_event_day == $currentDay){
-												$todaysevents .= '<li>'.get_the_title().'</li>';
-								
+												$todaysevents .= '<li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>';
+	
 										}
 									}
 									$todaysevents .= '</ul>';
