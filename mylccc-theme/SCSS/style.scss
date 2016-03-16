@@ -42,3 +42,14 @@ Section 6: Text
 				text-align: center;
 				width: 100%;
 }
+.skip-link{display: none;}
+
+  body{font-family: Lato;}
+  table caption{font-size: 22pt; margin: 10px 0 20px 0; font-weight: 700;}
+  table.calendar{width:100%; border:1px solid #000;}
+  td.day{width: 14%; height: 140px; border: 1px solid #000; vertical-align: top;}
+  td.day span.day-date{font-size: 14pt; font-weight: 700;}
+  th.header{background-color: #003972; color: #fff; font-size: 14pt; padding: 5px;}
+  .not-month{background-color: #a6c3df;}
+  td.today {background-color:#efefef;}
+  td.day span.today-date{font-size: 16pt;}

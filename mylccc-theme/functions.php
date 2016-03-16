@@ -111,6 +111,18 @@ function mylccc_theme_widgets_init() {
 add_action( 'widgets_init', 'mylccc_theme_widgets_init' );
 
 /**
+ * Enqueue google fonts.
+ */
+function add_google_fonts() {
+wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', false );
+	
+wp_enqueue_style( 'lato-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic', false ); 	
+	
+}
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function mylccc_theme_scripts() {

@@ -21,31 +21,33 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="row">
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mylccc-theme' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="row show-for-medium-up">
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+			<img src="<?php echo get_bloginfo('stylesheet_directory');?>/images/MyLCCC-Logo.png">
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mylccc-theme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+			</div>
+	  <div class="contain-to-grid sticky">
+	<nav class="top-bar" data-topbar role="navigation">
+         <ul class="title-area">
+            <li class="name show-for-small-only">
+                 <h1><a href="#"><img src="<?php echo get_bloginfo('stylesheet_directory');?>/images/mobile-MyLCCC-Name.png"></a></h1>
+            </li>
+            <!-- Mobile Menu Toggle -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
+            </li>
+        </ul>
+    <section class="top-bar-section"> <!-- Right Nav Section -->
+    	<ul class="left">
+    	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+     	</ul>
+     </section>
+    </nav>
+    </div>
 	</header><!-- #masthead -->
-
+	<div class="row main">
 	<div id="content" class="site-content">

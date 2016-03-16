@@ -1,3 +1,22 @@
 /* Section 5 - Footer Area */
-footer{ padding: 5px;}
+.footer{
+    padding-top: 10px;
+    padding-bottom: 10px;	
+}
+.site-footer{
+background: #454747;
 
+}
+.footer ul li{
+    border-right: 1px solid #666;
+}
+.footer ul li:last-child{
+border-right: none;
+}
+.lccc-footer-address p{
+    padding-left: 9px;
+    color: #ffffff;
+    font-size: 1.05rem;
+	    margin-bottom: 0;
+}
+.footerrow{padding: 0 5px;}
