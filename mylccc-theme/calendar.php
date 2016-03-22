@@ -12,15 +12,31 @@ get_header();
 	
 	<?php function todayPosts($month, $currentDay, $year){
 				$todaysevents = '';
+				
+				$temp = strLen($currentDay);
+	
+				$twoDay = '';
+	   $nextTwoDay = '';
+	
+				if ($temp < 2){
+					$twoDay = '0' . $currentDay;
+				}else{
+					$twoDay = $currentDay;
+				}
+	
+			 $nextDay = $currentDay + 1;
+				if ($temp < 2){
+					$nextTwoDay = '0' . $currentDay;
+				}else{
+					$nextTwoDay = $currentDay;
+				}
+	
 				$args = array(
-							'post_type' => 'lccc_event',
-							'posts_per_page' => -1,
-							//'year' => $year,
-							//'monthnum' => $month,
-							//'day' => $currentDay
-					'meta_key' => 'event_meta_box_event_start_date_and_time_',
-					'meta_value' => $month . '/' . $currentDay . '/' . $year . ' 12:00 am',
-					'meta_compare' => '>=',
+						'post_type' => 'lccc_event',
+						'meta_key' => 'event_start_date',
+						'meta_value' => $year . '-' . $month . '-' . $twoDay,
+						'compare' => 'BETWEEN',
+						'type' => 'DATE'
 					);
 				query_posts( $args );
 				// The Query
@@ -34,10 +50,7 @@ get_header();
 										$date=strtotime($eventdate);
 										$today_event_month=date("m",$date);
 										$today_event_day=date("j",$date);	
-										if($today_event_day == $currentDay){
-												$todaysevents .= '<li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>';
-	
-										}
+										$todaysevents .= '<li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>';
 									}
 									$todaysevents .= '</ul>';
 								} else {
