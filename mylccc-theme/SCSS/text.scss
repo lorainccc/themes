@@ -1,6 +1,6 @@
 /*Section 6 Text */
 p{
-  word-break: break-all;
+  word-break: break-word;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -24,3 +24,7 @@ font-family: 'Raleway', sans-serif;
 .uncategorized{background-color:#003B76;}
 .business{background-color: #38817A;}
 .lccc-news{background-color: #620808;}
+.event-time{font-weight: bold;}
+.event-title{margin-bottom: 0;}
+td.day a.datelink{color: #003B76; text-decoration: none;}
+td.day a.datelink-currentday{color: #ffffff; text-decoration: none;}

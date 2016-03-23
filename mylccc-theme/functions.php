@@ -162,3 +162,18 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+function add_my_day_var($public_query_vars) {
+    $public_query_vars[] = 'd';
+    return $public_query_vars;
+}
+
+add_filter('query_vars', 'add_my_day_var');
+
+function do_rewrite() {
+    add_rewrite_rule('day/([^/]+)/?$', 'index.php?pagename=day&d=$matches[1]','top');
+}
+
+add_action('init', 'do_rewrite');

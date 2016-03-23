@@ -9,28 +9,35 @@
 get_header();
 ?>
 <div class="small-12 medium-12 large-12 columns contentdiv">
-	
+			<div class="small-12 medium-12 large-12 columns pagediv">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main" role="main">
+						<?php
+						while ( have_posts() ) : the_post();
+							get_template_part( 'template-parts/content', 'eventscalendar' );
+					endwhile; // End of the loop.
+						?>
+
+					</main><!-- #main -->
+				</div><!-- #primary -->
+			</div>
+	<div class="small-12 medium-12 large-12 columns">
 	<?php function todayPosts($month, $currentDay, $year){
 				$todaysevents = '';
-				
 				$temp = strLen($currentDay);
-	
 				$twoDay = '';
 	   $nextTwoDay = '';
-	
 				if ($temp < 2){
 					$twoDay = '0' . $currentDay;
 				}else{
 					$twoDay = $currentDay;
 				}
-	
 			 $nextDay = $currentDay + 1;
 				if ($temp < 2){
 					$nextTwoDay = '0' . $currentDay;
 				}else{
 					$nextTwoDay = $currentDay;
 				}
-	
 				$args = array(
 						'post_type' => 'lccc_event',
 						'meta_key' => 'event_start_date',
@@ -61,7 +68,6 @@ get_header();
 		return $todaysevents;
 }
 ?>
-	
 <?php
 function build_calendar($month,$year,$dateArray) {
      // Create array containing abbreviations of days of week.
@@ -111,14 +117,12 @@ function build_calendar($month,$year,$dateArray) {
           $date = "$year-$month-$currentDayRel";
           
           if ($date == date("Y-m-d")){
-           $calendar .= "<td class='day today' rel='$date'><span class='today-date'>$currentDay</span><span class='event_entries'>".todayPosts($month,$currentDay,$year)."</span></td>";
+           $calendar .= "<td class='day today' rel='$date'><span class='today-date'><a class='datelink-currentday' href='/day/?d=$date'>$currentDay</a></span><span class='event_entries'>".todayPosts($month,$currentDay,$year)."</span></td>";
           }
           else{
-           $calendar .= "<td class='day' rel='$date'><span class='day-date'>$currentDay</span><span class='event_entries'>".todayPosts($month,$currentDay,$year)."</span></td>";
+           $calendar .= "<td class='day' rel='$date'><span class='day-date'><a class='datelink' href='/day/?d=$date'>$currentDay</a></span><span class='event_entries'>".todayPosts($month,$currentDay,$year)."</span></td>";
           }
-          
-      
-          
+   
           // Increment counters
  
           $currentDay++;
@@ -198,6 +202,7 @@ $dateArray = array();
  echo build_calendar($month,$year,$dateArray);
 ?>
 </div>
+</div>	
 <?php 
 get_footer();
 ?>
