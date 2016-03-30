@@ -42,6 +42,8 @@ get_header();
 						'post_type' => 'lccc_event',
 						'meta_key' => 'event_start_date',
 						'meta_value' => $year . '-' . $month . '-' . $twoDay,
+					'meta_value_num' => time(),
+						'orderby' =>'meta_value_num',
 						'compare' => 'BETWEEN',
 						'type' => 'DATE'
 					);
