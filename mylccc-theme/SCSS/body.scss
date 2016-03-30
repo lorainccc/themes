@@ -34,7 +34,14 @@ border-bottom: 1px inset #CCC;
 .hbimage{padding-top: 10px;}
 .pagediv{}
 .events-list{}
-.todays-event{border-bottom: 2px solid #cccccc;}
-.todays-event:last-child{border-bottom: none;}
-.today{background: #bbb;}
-.day{border: 2px solid #000;}
+.todays-event{}
+.todays-event:last-child{}
+.today{}
+.day{}
+ul.calendarlist li{list-style: none; background:#A0E4F1;margin-bottom: 5px;min-height: 60px;padding: 5px;}
+span.today-date a{ color: #000;font-weight: bold;font-size: 1.2rem;}
+span.day-date a{ color: #000;font-weight: bold;font-size: 1.2rem;}
+span.today-date, span.day-date {background: #fff;}
+span.event_entries ul li{border-bottom: none;}
+.daycontainer{background: #fff;min-height: 60px;padding: 2px 7px 10px 7px;}
+ul.todayseventslist li{background: #fff;min-height: 60px;}
