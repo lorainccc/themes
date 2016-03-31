@@ -19,6 +19,11 @@ get_header(); ?>
 						$event_year=date("Y",$date);
 			?>	
 			<div class="small-12 medium-12 large-12 columns">
+				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+				<li><a href="/calendar/?d=<?php echo $myvar;?>"><--- Back to Calendar</a></li>
+				<li class="show-for-large-up">&nbsp;</li>
+				<li style="text-align:right;"><a href="/week/?d=<?php echo $myvar; ?>">Back To Weekly View</a></li>	
+				</ul>
 			<h1><?php echo $event_month.' '.$event_day.', '.$event_year.' Events'; ?></h1>
 			</div>		
 				<div class="small-12 medium-12 large-12 columns pagediv">
@@ -33,10 +38,17 @@ get_header(); ?>
 										<?php 
 												$args = array(
 														'post_type' => 'lccc_event',
-														'meta_key' => 'event_start_date',
-														'meta_value' => $myvar,
-														'compare' => 'BETWEEN',
-														'type' => 'DATE'
+														'meta_query' => array(
+																			array(
+																						'key' => 'event_start_date',
+																						'value' => $myvar,
+																						'comapre' > 'BETWEEN',
+																						'type' => 'DATE'
+																			)
+															),
+														'orderby' => 'meta_value',
+    										'meta_key' => '	event_start_time' ,
+														'order'   => 'ASC',
 													);
 												query_posts( $args );
 												// The Query
@@ -53,7 +65,7 @@ get_header(); ?>
 																			$today_event_month=date("m",$date);
 																			$today_event_day=date("j",$date);
 																			$time=date("h:i A",$date);
-																			?><a href="<?php echo get_the_permalink();?>"><?php the_title('<h2 class="event-title">','</h2>');?></a><?php
+																			?><?php the_title('<h2 class="event-title">','</h2>');?><?php
 																			echo '<p class="event-time">'.$time.'</p>';
 																			the_content('<p>','</p>');
 																	?>

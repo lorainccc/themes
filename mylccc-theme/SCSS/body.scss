@@ -38,10 +38,14 @@ border-bottom: 1px inset #CCC;
 .todays-event:last-child{}
 .today{}
 .day{}
-ul.calendarlist li{list-style: none; background:#A0E4F1;margin-bottom: 5px;min-height: 60px;padding: 5px;}
-span.today-date a{ color: #000;font-weight: bold;font-size: 1.2rem;}
-span.day-date a{ color: #000;font-weight: bold;font-size: 1.2rem;}
+ul.calendarlist li{list-style: none; background:#A6C7C7;margin-bottom: 5px;min-height: 60px;padding: 3px;}
+.clanedardayseventslist li{list-style: none;}
+span.today-date a{ color: #000;font-weight: bold;font-size: 1.4rem; font-style: italic;}
+span.calendar-today a{ color: #000;font-weight: bold;font-size: 1.4rem; font-style: italic;}
+span.day-date a{ color: #000;font-size: 1.2rem;}
 span.today-date, span.day-date {background: #fff;}
-span.event_entries ul li{border-bottom: none;}
 .daycontainer{background: #fff;min-height: 60px;padding: 2px 7px 10px 7px;}
-ul.todayseventslist li{background: #fff;min-height: 60px;}
+ul.todayseventslist li{border-bottom: 2px solid #eee;background: #fff;min-height: 60px;display: inline-block;}
+ul.todayseventslist li:last-child {border-bottom: none;}
+div.todays-event{border-bottom: 2px solid #eee;}
+div.todays-event:last-child {border-bottom: none;}

@@ -37,6 +37,7 @@ get_header(); ?>
 				$currentyeardisplayed = '';
 				$prevstartday = '';
 	function todayPosts($month, $currentDay, $year){
+				global $post;
 				$todaysevents = '';
 				$temp = strLen($currentDay);
 				$twoDay = '';
@@ -54,12 +55,18 @@ get_header(); ?>
 				}
 				$args = array(
 						'post_type' => 'lccc_event',
-						'meta_key' => 'event_start_date',
-						'meta_value' => $year . '-' . $month . '-' . $twoDay,
-					'meta_value_num' => time(),
-						'orderby' =>'meta_value_num',
-						'compare' => 'BETWEEN',
-						'type' => 'DATE'
+						'post_status' => 'publish',
+						'meta_query' => array(
+									array(
+												'key' => 'event_start_date',
+												'value' => $year . '-' . $month . '-' . $twoDay,
+												'comapre' > 'BETWEEN',
+												'type' => 'DATE'
+									)
+						),
+						'orderby' => 'meta_value',
+    		'meta_key' => '	event_start_time' ,
+						'order'   => 'ASC',
 					);
 				query_posts( $args );
 				// The Query
@@ -73,7 +80,8 @@ get_header(); ?>
 										$date=strtotime($eventdate);
 										$today_event_month=date("m",$date);
 										$today_event_day=date("j",$date);	
-										$todaysevents .= '<li><div class="small-12 medium-2 large-2 columns"><p class="event-time">'.$starttime.'</p></div><div class="small-12 medium-10 large-10 columns"><div class="small-12 medium-12 large-12 columns"><a href="'.get_the_permalink().'"><h5 class="event-title">'.get_the_title().'</h5></a></div><div class="small-12 medium-12 large-12 columns">'.get_the_excerpt().'</div></div></li>';
+									$starttime =  get_post_meta($post->ID, 'event_start_time', true);	
+										$todaysevents .= '<li><div class="small-12 medium-2 large-2 columns"><p class="event-time">'.$starttime.'</p></div><div class="small-12 medium-10 large-10 columns"><a href="'.get_the_permalink().'"><h5 class="event-title">'.get_the_title().'</h5></a><p>'.get_the_excerpt().'</p></div></li>';
 									}
 									$todaysevents .= '</ul>';
 								} else {
@@ -90,6 +98,7 @@ function build_calendar($month,$year,$dateArray) {
 					global $startday;
 					global $currentyeardisplayed;
 					global $prevstartday;
+					global $lastdate;
      // Create array containing abbreviations of days of week.
      $daysOfWeek = array('Sun','Mon','Tues','Wed','Thurs','Fri','Sat');
      // What is the first day of the month in question?
@@ -107,7 +116,8 @@ function build_calendar($month,$year,$dateArray) {
        // Get today's date and extract the day of the month to start on.
 	 					$currentDay = $startday;
 					// Create the table tag opener and day headers
-    $calendar = "<h3 class='calendar-list-header'>Week Of $monthName $currentDay, $year</h3><br />";
+					$calendar = "<a href='/calendar/?d=".$lastdate."'><-- Back To The Calendar</a><br />";
+    $calendar .= "<h3 class='calendar-list-header'>Week Of $monthName $currentDay, $year</h3><br />";
 					$calendar .= "<ul class='calendarlist'>";
      //$calendar .= "<caption>$monthName $year</caption>";
      //$calendar .= "<li>";

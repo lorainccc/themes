@@ -4,7 +4,10 @@
 .homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}.homeblock_content{padding-top:10px}
 .hbheader_category{margin-top:-10px;padding:0}.hbheader_category a{float:left;text-align:center;color:#fff}
 .hbimage{padding:0}.main{padding:0;border-right:1px solid #003b76;border-left:1px solid #003b76}
-.hbimage{padding-top:10px}ul.calendarlist li{list-style:none;background:#a0e4f1;margin-bottom:5px;min-height:60px;padding:5px}
-span.today-date a{color:#000;font-weight:bold;font-size:1.2rem}span.day-date a{color:#000;font-weight:bold;font-size:1.2rem}
-span.today-date,span.day-date{background:#fff}span.event_entries ul li{border-bottom:0}
-.daycontainer{background:#fff;min-height:60px;padding:2px 7px 10px 7px}ul.todayseventslist li{background:#fff;min-height:60px}
+.hbimage{padding-top:10px}ul.calendarlist li{list-style:none;background:#a6c7c7;margin-bottom:5px;min-height:60px;padding:3px}
+.clanedardayseventslist li{list-style:none}span.today-date a{color:#000;font-weight:bold;font-size:1.4rem;font-style:italic}
+span.calendar-today a{color:#000;font-weight:bold;font-size:1.4rem;font-style:italic}
+span.day-date a{color:#000;font-size:1.2rem}span.today-date,span.day-date{background:#fff}
+.daycontainer{background:#fff;min-height:60px;padding:2px 7px 10px 7px}ul.todayseventslist li{border-bottom:2px solid #eee;background:#fff;min-height:60px;display:inline-block}
+ul.todayseventslist li:last-child{border-bottom:0}div.todays-event{border-bottom:2px solid #eee}
+div.todays-event:last-child{border-bottom:0}

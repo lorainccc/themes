@@ -51,13 +51,19 @@ get_header();
 					$nextTwoDay = $currentDay;
 				}
 				$args = array(
-						'post_type' => 'lccc_event',
-						'meta_key' => 'event_start_date',
-						'meta_value' => $year . '-' . $month . '-' . $twoDay,
-					'meta_value_num' => time(),
-						'orderby' =>'meta_value_num',
-						'compare' => 'BETWEEN',
-						'type' => 'DATE'
+							'post_type' => 'lccc_event',
+						'post_status' => 'publish',
+						'meta_query' => array(
+									array(
+												'key' => 'event_start_date',
+												'value' => $year . '-' . $month . '-' . $twoDay,
+												'comapre' > 'BETWEEN',
+												'type' => 'DATE'
+									)
+						),
+						'orderby' => 'meta_value',
+    		'meta_key' => '	event_start_time' ,
+						'order'   => 'ASC',
 					);
 				query_posts( $args );
 				// The Query
@@ -108,7 +114,8 @@ function build_calendar($month,$year,$dateArray) {
 	    $today = getdate();		
 					$currentDay = $today['mday'];
 					// Create the table tag opener and day headers
-     $calendar = "<h3 class='calendar-list-header'>Week Of $monthName $currentDay, $year</h3><br />";
+     $calendar = "<a href='/calendar'><-- Back To The Calendar</a><br />";
+					$calendar .= "<h3 class='calendar-list-header'>Week Of $monthName $currentDay, $year</h3><br />";
 					$calendar .= "<ul class='calendarlist'>";
      //$calendar .= "<caption>$monthName $year</caption>";
      //$calendar .= "<li>";
