@@ -7,4 +7,4 @@ p{word-break:break-word;font-family:'Lato',sans-serif}a{font-family:'Lato',sans-
 .event-title{margin-bottom:0}td.day a.datelink{color:#003b76;text-decoration:none}
 td.day a.datelink-currentday{color:#fff;text-decoration:none}h3.calendar-list-header{text-decoration:underline}
 h4.calendar-month-subheader{text-decoration:underline;text-align:center}h5.event-title{margin-top:-6px;font-size:1.7rem;font-weight:bold;color:#003b76;text-decoration:underline}
-p.event-time{font-size:1.2rem}
+p.event-time{font-size:1.2rem}.eventslist a h3.eventtitle{color:#008cba}.eventslist a{color:#008cba;text-decoration:underline}
