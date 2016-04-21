@@ -32,11 +32,11 @@ $myvar = get_query_var('d');
     $year = $dateComponents['year'];
 				$day = $dateComponents['mday'];
    } else {
-   
      $month = $m;
      $year = $y;
      $day =$d;
    }
+
 $monthString = array();
 $dateArray = array();
 ?>

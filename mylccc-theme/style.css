@@ -35,10 +35,12 @@ span.day-date a{color:#000;font-size:1.2rem}span.today-date,span.day-date{backgr
 .daycontainer{background:#fff;min-height:60px;padding:2px 7px 10px 7px}ul.todayseventslist li{border-bottom:2px solid #eee;background:#fff;min-height:60px;display:inline-block}
 ul.todayseventslist li:last-child{border-bottom:0}div.todays-event{border-bottom:2px solid #eee}
 div.todays-event:last-child{border-bottom:0}header.page-header{border-bottom:1px inset #333}
-div.archive-eventcontainer{border-bottom:1px solid #ccc;margin:5px 0}div.archive-eventcontainer:last{border-bottom:0}
+div.archive-eventcontainer{border-bottom:1px solid #ccc;margin:5px 0}div.archive-eventcontainer:last-child{border-bottom:0}
 p.month{margin-bottom:0;margin-top:12px;margin-left:4px;width:100%;font-weight:bold;color:#003b76;line-height:1.7;font-size:.97rem}
 p.day{margin-bottom:0;margin-top:-10px;margin-left:9px;font-weight:bold;color:#003b76}
-/*! Section 3 - Header */.site-header{background-color:#dfdfdf}/*! Section 4 - Navigation Styles  */.footer{padding-top:10px;padding-bottom:10px}
+/*! Section 3 - Header */.site-header{background-color:#dfdfdf}/*! Section 4 - Navigation Styles  */.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{color:#fff;text-decoration:none}
+.navigation li{display:inline}.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{background-color:#6fb7e9;border-radius:3px;cursor:pointer;padding:12px;padding:.75rem}
+.navigation li a:hover,.navigation li.active a{background-color:#3c8dc5}.footer{padding-top:10px;padding-bottom:10px}
 .site-footer{background:#454747}.footer ul li{border-right:1px solid #666}.footer ul li:last-child{border-right:0}
 .lccc-footer-address p{padding-left:9px;color:#fff;font-size:1.05rem;margin-bottom:0}
 .footerrow{padding:0 5px}p{word-break:break-word;font-family:'Lato',sans-serif}
