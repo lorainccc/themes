@@ -19,12 +19,16 @@ get_header(); ?>
 								<main id="main" class="site-main" role="main">
 												<?php
 												// The Query
-														$args = array(
-														'post_type' => 'post',
-														'posts_per_page' => '12'	
+															$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+													$args = array(
+														'post_type' => array('post', 'lccc_announcement' ),
+														'paged' => $paged,
+														'category__not_in' => '1',
+														'posts_per_page' => '12',
+														'orderby' => 'date',
+															'order' => 'ASC'
 														);
 														$the_main_query = new WP_Query( $args );
-
 														// The Loop
 														if ( $the_main_query->have_posts() ) {
 															echo '<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
@@ -64,7 +68,7 @@ get_header(); ?>
 																echo '</li>';							
 															}
 															echo '</ul>';
-																		the_posts_navigation();
+												wpbeginner_numeric_posts_nav();
 														} else {
 															// no posts found
 														}

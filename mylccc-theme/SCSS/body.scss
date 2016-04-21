@@ -32,3 +32,38 @@ border-bottom: 1px inset #CCC;
 .hbimage{padding: 0;}
 .main{padding: 0; border-right: 1px solid #003B76;border-left: 1px solid #003B76;}
 .hbimage{padding-top: 10px;}
+.pagediv{}
+.events-list{}
+.todays-event{}
+.todays-event:last-child{}
+.today{}
+.day{}
+ul.calendarlist li{list-style: none; background:#A6C7C7;margin-bottom: 5px;min-height: 60px;padding: 3px;}
+.clanedardayseventslist li{list-style: none;}
+span.today-date a{ color: #000;font-weight: bold;font-size: 1.4rem; font-style: italic;}
+span.calendar-today a{ color: #000;font-weight: bold;font-size: 1.4rem; font-style: italic;}
+span.day-date a{ color: #000;font-size: 1.2rem;}
+span.today-date, span.day-date {background: #fff;}
+.daycontainer{background: #fff;min-height: 60px;padding: 2px 7px 10px 7px;}
+ul.todayseventslist li{border-bottom: 2px solid #eee;background: #fff;min-height: 60px;display: inline-block;}
+ul.todayseventslist li:last-child {border-bottom: none;}
+div.todays-event{border-bottom: 2px solid #eee;}
+div.todays-event:last-child {border-bottom: none;}
+header.page-header{border-bottom: 1px inset #333;}
+div.archive-eventcontainer{border-bottom: 1px solid #ccc;margin:5px 0;}
+div.archive-eventcontainer:last-child{border-bottom: none;}
+p.month{ margin-bottom: 0;
+    margin-top: 12px;
+    margin-left: 4px;
+    width: 100%;
+    font-weight: bold;
+    color: #003B76;
+    line-height: 1.7;
+    font-size: 0.97rem;}
+p.day {
+    margin-bottom: 0;
+    margin-top: -10px;
+    margin-left: 9px;
+    font-weight: bold;
+    color: #003B76;
+}
