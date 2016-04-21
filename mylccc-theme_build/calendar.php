@@ -36,7 +36,6 @@ $myvar = get_query_var('d');
      $year = $y;
      $day =$d;
    }
-
 $monthString = array();
 $dateArray = array();
 ?>

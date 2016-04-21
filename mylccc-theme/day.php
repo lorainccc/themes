@@ -13,10 +13,26 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <?php $myvar = get_query_var('d');
-						$date=strtotime($myvar);
-						$event_month=date("F",$date);
-						$event_day=date("j",$date);
-						$event_year=date("Y",$date);
+						
+		if($myvar != ''){
+	$date=strtotime($myvar);
+				$event_month=date("F",$date);
+				$event_day=date("j",$date);
+				$event_year=date("Y",$date);
+	}elseif ($m == ""){  
+    $dateComponents = getdate();
+    $event_month = $dateComponents['month'];
+    $myvar_event_month = $dateComponents['mon'];
+				$event_year = $dateComponents['year'];
+				$event_day = $dateComponents['mday'];
+				$myvar = $event_year.'-'.$myvar_event_month.'-'.$event_day;
+   } else {
+     $event_month = $m;
+     $event_year = $y;
+     $event_day =$d;
+   }
+			
+			
 			?>	
 			<div class="small-12 medium-12 large-12 columns">
 				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
@@ -47,7 +63,7 @@ get_header(); ?>
 																			)
 															),
 														'orderby' => 'meta_value',
-    										'meta_key' => '	event_start_time' ,
+    										'meta_key' => 'event_start_time' ,
 														'order'   => 'ASC',
 													);
 												query_posts( $args );
@@ -60,7 +76,7 @@ get_header(); ?>
 																	<div class="small-12 medium-12 large-12 columns todays-event">
 																	<?php	
 																			$the_query->the_post();
-																			$eventdate = event_meta_box_get_meta('event_meta_box_event_start_date_and_time_');	
+																			$eventdate = event_meta_box_get_meta('event_start_date');													
 																			$date=strtotime($eventdate);
 																			$today_event_month=date("m",$date);
 																			$today_event_day=date("j",$date);
