@@ -22,8 +22,7 @@ get_header(); ?>
 				</div><!-- #primary -->
 			</div>
 	<div class="small-12 medium-12 large-12 columns">
-	<a href='/calendar/?d=".$lastdate."'><-- Back To The Calendar</a><br />	
-<ul class="small-block-grid-1 small-block-grid-3 large-block-grid-3">		
+
 	<?php 
 $myvar = get_query_var('d');
    //parse_str($_SERVER['QUERY_STRING']);  
@@ -47,6 +46,9 @@ $monthString = array();
 $dateArray = array();
 
 ?>
+<?php 	$lastdate =  $year.'-'.$month.'-'.$day; ?>
+			<a href='/calendar/?d=<?php echo $lastdate;?>'><-- Back To The Calendar</a><br />	
+<ul class="small-block-grid-1 small-block-grid-3 large-block-grid-3">		
 						<li>
 							<?php
 							 do_action( 'lccc_prev_week',$year, $month, $day);
