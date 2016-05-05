@@ -1,2 +1,24 @@
 /*! Section 3 - Header */
-.site-header{background-color: #DFDFDF;}
+.site-header{background-color: rgba(223, 223, 223, 0.8);}
+.header-row{background-color: #dfdfdf;	border-left: 1px solid #999999;border-right: 1px solid #999999;}
+.site-branding{padding: 0;}
+.header-social-links{background: #003B76;
+    height: 50px;
+   margin-right: -7px;
+    margin-top: 13px;
+    border-bottom: 2px inset #000;
+    border-right: 1px inset #444;
+}
+
+ul.social-icons-header li {
+	border-right: none;
+	padding-bottom: 0;
+	margin-top: -5px;
+}
+ul.social-icons-header li i{
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+				
+}
+h4.social-links-header{text-align: center;color: #fff;}

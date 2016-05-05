@@ -25,4 +25,11 @@
 .navigation li a:hover,
 .navigation li.active a {
 	background-color: #3C8DC5;
+	    color: #000;
+    font-weight: bold;
+}
+@media only screen and (max-width: 45.813em){
+	.top-bar-section li:not(.has-form) a:not(.button){
+	padding: 0 0.4375rem;
+	}
 }

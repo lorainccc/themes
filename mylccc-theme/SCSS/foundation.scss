@@ -4,8 +4,8 @@
 }
 a.button.radius{background-color: #217dbb;font-size: 0.8875em;
 }
-.contain-to-grid, .contain-to-grid .top-bar {
-    background: #003B76;
+.contain-to-grid {
+    background: rgba(0, 59, 118, 0.5);
 }
 .top-bar-section ul li:hover:not(.has-form)>a {
 background: #003B76;
@@ -13,3 +13,9 @@ background: #003B76;
 .top-bar-section li:not(.has-form) a:not(.button){
 background: #003B76;
 }
+.contain-to-grid .top-bar {
+   max-width: 65.5rem;
+			background: #003B76;
+			border-left: 1px inset #333;
+			border-right: 1px inset #333;
+ }
