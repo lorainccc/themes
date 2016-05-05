@@ -45,6 +45,7 @@ function mylccc_theme_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'mylccc-theme' ),
+		'footer-menu' => esc_html__( 'Footer Menu', 'mylccc-theme' ),
 	) );
 
 	/*
@@ -114,7 +115,7 @@ add_action( 'widgets_init', 'mylccc_theme_widgets_init' );
  * Enqueue google fonts.
  */
 function add_google_fonts() {
-wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', false );
+wp_enqueue_style( 'pt-sans-google-fonts', 'https://fonts.googleapis.com/css?family=PT+Sans:400,700', false );
 	
 wp_enqueue_style( 'lato-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic', false ); 	
 	
@@ -126,11 +127,18 @@ add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
  * Enqueue scripts and styles.
  */
 function mylccc_theme_scripts() {
-	wp_enqueue_style( 'mylccc-theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'mylccc-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+/* Foudnation Init JS */
+ wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery', 'foundation-js' ), '1', true );
+	
+	wp_enqueue_script( 'foundation-js',get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
+	
+	 wp_enqueue_style( 'foundation-mincss', get_template_directory_uri() . '/foundation/css/foundation.min.css' );
+	
+		wp_enqueue_style( 'mylccc-theme-style', get_stylesheet_uri() );
+	//wp_enqueue_script( 'mylccc-theme-navigation', get_stylesheet() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'mylccc-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	//wp_enqueue_script( 'mylccc-theme-skip-link-focus-fix', get_stylesheet() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -145,24 +153,24 @@ require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
- */
+ 
 require get_template_directory() . '/inc/template-tags.php';
-
+*/
 /**
  * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
 
+require get_template_directory() . '/inc/extras.php';
+ */
 /**
  * Customizer additions.
- */
+ 
 require get_template_directory() . '/inc/customizer.php';
-
+*/
 /**
  * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
 
+require get_template_directory() . '/inc/jetpack.php';
+ */
 
 
 function add_my_day_var($public_query_vars) {
