@@ -1,0 +1,56 @@
+/*!
+Table of Contents
+Color Section : LCCC Color Scheme
+Mixin Section : LCCC Mixins
+Section 1: Foundation
+Section 2: Body
+Section 3: Header
+Section 4: Navigation
+Section 5: Footer
+Section 6: Text
+*/
+
+@import 'color.scss';
+@import 'mixins.scss';
+@import 'foundation.scss';
+@import 'body.scss';
+@import 'header.scss';
+@import 'navigation.scss';
+@import 'footer.scss';
+@import 'text.scss';
+.tag {
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    line-height: 15px;
+    padding: 8px 8px 8px 8px;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    zoom: 1;
+    -webkit-transition: 0.14s linear;
+    -moz-transition: 0.14s linear;
+    -o-transition: 0.14s linear;
+    transition: 0.14s linear;
+    -webkit-backface-visibility: hidden;
+    float: left;
+				text-align: center;
+				width: 100%;
+}
+.skip-link{display: none;}
+
+  body{font-family: Lato;}
+  table caption{font-size: 22pt; margin: 10px 0 20px 0; font-weight: 700;}
+  table.calendar{width:100%; border:1px solid #000;}
+  td.day{width: 14%; height: 140px; border: 1px solid #000; vertical-align: top;padding: 0.5625rem 0.325rem;}
+		td.day a{text-decoration: underline;}
+  td.day span.day-date{font-size: 14pt; font-weight: 700;}
+  th.header{background-color: #003972; color: #fff; font-size: 14pt; padding: 5px;}
+  .not-month{background-color: #a6c3df;}
+  td.today {background-color:#0062C5; color: #ffffff;}
+		td.today a{color: #ffffff;text-decoration: underline;}
+		td.day span.today-date{font-size: 16pt;}
+		.todayseventslist{padding: 0;list-style: none;margin-bottom: 0;margin-left: 0;}

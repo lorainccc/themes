@@ -1,0 +1,53 @@
+//@import 'color.scss';
+/*Section 6 Text */
+$latofont: Lato, sans-serif;
+$pt-sansfont: PT Sans, sans-serif;
+
+p{
+  word-break: break-word;
+	font-family: $latofont;
+}
+
+a{
+font-family: $latofont;
+}
+
+.top-bar-section ul li>a {
+font-family: $latofont;
+}
+h1 ,h2 ,h3, h4, h4 ,h5, h6 ,h7 {
+font-family: $pt-sansfont;
+}
+h3.footer-connect{
+color: #fff; text-align: center;
+}
+.tag a h7{color:#ffffff;}
+.midpoint-campus-center-news{background:$midpoint-campus-center-news-bg;}
+.lccc-sports-and-recreation-news{background: $lccc-sports-and-recreation-news-bg;}
+.campus-wide{background-color:$campus-wide-bg;}
+.students{background-color:$students-bg;}
+.faculty-student{background-color:$faculty-student-bg;}
+.staff-student{background-color:$staff-student-bg;}
+.stocker-arts-center-news{background-color: $stocker-arts-center-news-bg;}
+.stocker-arts{background-color:$stocker-arts-bg;}
+.athletics{background-color:$athletics-bg;}
+.uncategorized{background-color:$uncategorized-bg;}
+.business{background-color:$business-bg;}
+.lccc-news{background-color:$lccc-news-bg;}
+.lccc-student-news{background-color:$lccc-student-news-bg;}
+.tag.lccc-student-news a h7{color: #000;}
+.tag.midpoint-campus-center-news a h7{color: #000;}
+.event-time{font-weight: bold;}
+.event-title{margin-bottom: 0;}
+td.day a.datelink{color: #003B76; text-decoration: none;}
+td.day a.datelink-currentday{color: #ffffff; text-decoration: none;}
+h3.calendar-list-header{text-decoration: underline;}
+h4.calendar-month-subheader{text-decoration: underline; text-align: center;}
+h5.event-title{margin-top: -6px; font-size: 1.7rem;font-weight: bold;color: #003B76; text-decoration: underline;}
+p.event-time{font-size: 1.2rem;}
+.eventslist a h3.eventtitle {color: #008cba;}
+.eventslist a{color: #008cba; text-decoration: underline;}
+.mobile-title h1{word-break:break-word; text-align: center; font-size: 1.7rem;margin-top: -15px;}
+.site-branding-title h1{ margin-left: -15px;
+    margin-top: 24px;
+    font-size: 2.4rem;}

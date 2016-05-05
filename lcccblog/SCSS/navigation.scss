@@ -1,0 +1,49 @@
+/*! Section 4 - Navigation Styles  */
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: #1C3F73;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: #3C8DC5;
+	    color: #000;
+    font-weight: bold;
+}
+
+@media only screen and (min-width:39.938em) and (max-width: 45.813em){
+.top-bar-section li:not(.has-form) a:not(.button)		{
+		padding: 0 0.4375rem;
+		}
+}
+		
+@media only screen and (max-width:39.938em){
+		.contain-to-grid .top-bar{
+					background: #333;
+		}	
+	.top-bar-section ul li {
+    background: #333;
+    border-bottom: 1px solid #fff;
+}
+	.top-bar-section ul li>a {
+    font-size: 1.025rem;
+}
+}
