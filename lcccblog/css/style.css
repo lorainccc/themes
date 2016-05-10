@@ -34,7 +34,8 @@ article{border-bottom:1px solid #ddd}article:last-child{border-bottom:0}@media o
 .site-branding{padding:0}.header-social-links{background:#003b76;height:50px;margin-right:-7px;margin-top:13px;border-bottom:2px inset #000;border-right:1px inset #444}
 ul.social-icons-header li{border-right:0;padding-bottom:0;margin-top:-5px}ul.social-icons-header li i{font-size:35px;text-align:center;color:#fff}
 h4.social-links-header{text-align:center;color:#fff}.site-logo{padding-right:0}.site-branding-title{padding:0}
-.mobile-title{background-color:#dfdfdf;border-bottom:3px inset #000;padding:0}/*! Section 4 - Navigation Styles  */.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{color:#fff;text-decoration:none}
+.mobile-title{background-color:#dfdfdf;border-bottom:3px inset #000;padding:0}@media only screen and (min-width:40.063em) and (max-width:64em){.header-social-links{background:#003b76;height:50px;margin-right:-7px;margin-top:-18px;border-bottom:2px inset #000;border-right:1px inset #444;margin-bottom:15px}
+}/*! Section 4 - Navigation Styles  */.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{color:#fff;text-decoration:none}
 .navigation li{display:inline}.navigation li a,.navigation li a:hover,.navigation li.active a,.navigation li.disabled{background-color:#1c3f73;border-radius:3px;cursor:pointer;padding:12px;padding:.75rem}
 .navigation li a:hover,.navigation li.active a{background-color:#3c8dc5;color:#000;font-weight:bold}
 @media only screen and (min-width:39.938em) and (max-width:45.813em){.top-bar-section li:not(.has-form) a:not(.button){padding:0 .4375rem}

@@ -27,7 +27,7 @@
 
 	<header id="masthead" class="site-header" role="banner">			
 		<div class="row show-for-medium-up header-row">
-		<div class="medium-8 large-9 columns site-branding">
+		<div class="medium-12 large-9 columns site-branding">
 			<div class="medium-2 large-2 columns site-logo">
 			<?php
 			$url = home_url();
