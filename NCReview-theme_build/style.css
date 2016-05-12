@@ -1,0 +1,34 @@
+/*!
+Theme Name: NCReview-theme_build
+Theme URI:    http://www.lorainccc.edu 
+Author: LCCC Web Team 
+Author URI: http://www.lorainccc.edu 
+Description: Lorain County Community College Child Theme 
+Version:1.0.0
+Template: lccc-framework  
+License: GNU General Public License v2 or later 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+Text Domain:  NCReview-theme_build */ 
+ /*!
+Table of Contents
+Color Section : LCCC Color Scheme
+Mixin Section : LCCC Mixins
+Section 1: Foundation
+Section 2: Body
+Section 3: Header
+Section 4: Navigation
+Section 5: Footer
+Section 6: Text
+*//*! Mixin Section : LCCC Mixins *//*!  Section 1 - Foundation Overrides */.row{max-width:65.5rem}
+/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;background-color:#e0e0e0}
+.sidebarcontainer,.home-page-content,.fiction,.non-fiction,.arts-n-photo,.news-n-notes{background:rgba(254,254,254,0.8);margin-top:30px;padding:10px}
+.sidebarcontainer{background:rgba(254,254,254,0.9);margin-top:30px;padding:10px}.right-postimage{border-left:1px solid #CCC}
+.right-postimage img{margin-top:20px;margin-bottom:20px}.left-postimage{border-right:1px solid #CCC}
+.left-postimage img{margin-top:20px;margin-bottom:20px}ul.post-categories{list-style:none;margin-left:0;margin-bottom:0}
+ul.post-categories li a{font-size:1.6rem;text-decoration:underline}.mini-photogallery li a img{width:100%}
+.mini-photogallery li{padding-bottom:0}.sidebarcontainer .post-stats{display:block;font-size:16px;font-weight:bold}
+.sidebarcontainer a.wpp-post-title{font-size:1.5rem;text-decoration:underline}/*! Section 3 - Header */.skip-link{display:none}
+/*! Section 4 - Navigation Styles  */.contain-to-grid{background:0}.contain-to-grid .top-bar{border-left:2px solid #333;border-right:2px solid #333}
+footer{background:#333}.footerrow{padding-top:0;padding-bottom:0;background:#333;color:#fff;margin-top:20px}
+.footer-copyright p{text-align:left;vertical-align:middle;margin-bottom:0;margin-top:20px}
+a:hover,a:focus{color:#343b99}h3.author-title{font-style:italic}
