@@ -100,13 +100,12 @@ add_action( 'widgets_init', 'lccc_framework_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lccc_framework_scripts() {
-	wp_enqueue_style( 'lccc-framework-style', get_stylesheet_uri() );
 
 	/* ----- Add Foundation Support ----- */
 	/* Add Foundation CSS */
 	
-	wp_enqueue_style( 'foundation-normalize', get_stylesheet_directory_uri() . '/foundation/css/normalize.css' );
-	wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/foundation/css/foundation.css' );
+	wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
+	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/foundation/css/foundation.min.css' );
 	
 	/* Add Custom CSS */
 	
@@ -116,12 +115,19 @@ function lccc_framework_scripts() {
 	
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-modernizr-js', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array( 'jquery' ), '1', true );
-	
 	/* Foundation Init JS */
 	
 	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 	
+		/* Foundation Icons */
+	if ( wp_style_is( 'foundation_font_icon_css', 'enqueued' ) ) {
+		return;
+	}else{
+			wp_enqueue_style('foundation_font_icon_css', get_template_directory_uri() . '/foundation-icons/foundation-icons.css');
+	}
 	/* ----- End Foundation Support ----- */
+		
+	wp_enqueue_style( 'lccc-framework-style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'lccc-framework-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
