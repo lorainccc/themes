@@ -6,7 +6,7 @@ body{
 //	background-image: url(images/NCR_background.jpg);
 }
  .sidebarcontainer, .home-page-content, .fiction, .non-fiction, .arts-n-photo, .news-n-notes{background: rgba(254,254,254,0.8);margin-top: 30px;padding: 10px;}
-.sidebarcontainer{background: rgba(254,254,254,0.9);margin-top: 30px;padding: 10px;}
+.sidebarcontainer{background: rgba(254,254,254,0.9);padding: 10px;}
 
 .right-postimage { border-left: 1px solid #CCC;}
 .right-postimage img{ margin-top: 20px; margin-bottom: 20px;}
@@ -16,9 +16,12 @@ ul.post-categories{list-style: none;margin-left: 0;margin-bottom: 0;}
 ul.post-categories li a {font-size: 1.6rem; text-decoration: underline;}
 .mini-photogallery li a img{width:100%;}
 .mini-photogallery li {padding-bottom: 0;}
-.sidebarcontainer .post-stats {
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-}
-.sidebarcontainer a.wpp-post-title {font-size: 1.5rem; text-decoration: underline;}
+.current-issue-post{background: rgba(254,254,254,1);margin-bottom: 10px; padding: 10px;border: 1px inset #000;}
+.page-header{background: rgba(254,254,254,0.8);margin-bottom: 15px; padding: 10px;margin-top: 30px;}
+article{background: rgba(254,254,254,0.8);padding: 10px;}
+.entry-footer{background: none;}
+@media only screen and (min-width: 40em) { 
+.main{min-height: 566px;}
+.page-content , .post-content, .category-content, .sidebarcontainer{margin-top: 30px;}
+} 
+@media only screen and (max-width: 40em) { } 

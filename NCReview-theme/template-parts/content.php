@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package MyLCCC_Theme
+ * @package ncreview_theme
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -18,7 +18,7 @@
 			}
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php mylccc_theme_posted_on(); ?>
+			<?php ncreview_theme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

@@ -22,8 +22,83 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+<?php 	endif; ?>
+			
 			<?php
+$thecategory = single_cat_title( '', false );
+$args = array(
+	'post_type' => 'post',
+	'category_name'=> $thecategory,
+	'tag' => 'current-issue',
+	);
+$query = new WP_Query( $args );
+while ( $query->have_posts() ) {
+	$query->the_post();
+?>	
+			<div class="small-12 medium-12 large-12 columns current-issue-post">
+							<header class="entry-header">
+										<h2 class="current-issue-tag"><?php the_tags('','',''); ?></h2>
+										
+							</header><!-- .entry-header -->
+						<div class="entry-content">
+								<?php $galleryArray = get_post_gallery_ids($post->ID);
+		if (!empty($galleryArray)){
+			?>
+					<div class="small-12 columns medium-5 large-5 columns left-postimage">	
+												<ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2 mini-photogallery" data-clearing>
+												<?php foreach ($galleryArray as $id) { ?>
+												<li><a href="<?php echo wp_get_attachment_url( $id ); ?>"><img src="<?php echo wp_get_attachment_url( $id ); ?>"></a></li>		
+															<?php } ?>
+																	</ul>
+					</div>			
+					<div class="small-12 columns medium-7 large-7 columns">
+							<header class="entry-header">
+										<?php 	the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+						</header><!-- .entry-header -->
+													<p><?php the_excerpt(); ?></p> 
+					</div>
+		<?php
+		}else if(has_post_thumbnail()){
+		?>
+							<div class="small-12 columns medium-5 large-5 columns left-postimage">	
+											<?php the_post_thumbnail(); ?>
+					</div>			
+					<div class="small-12 columns medium-7 large-7 columns">
+							<header class="entry-header">
+										<?php 	the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+						</header><!-- .entry-header -->
+													<p><?php the_excerpt(); ?></p> 
+					</div>
+		<?php
+		}else{
+			?>
+				<header class="entry-header">
+						<?php 	the_title( '<h2 class="entry-title-tag"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+				</header><!-- .entry-header -->
+				<div class="small-12 medium-12 larg-12 columns">		
+						<?php	
+											the_excerpt();
+						?>
+					</div>
+					<?php
+		}
+	?>
+						</div><!-- .entry-content -->
+			</div>
+	<?php 
+}
+
+/* Restore original Post Data 
+ * NB: Because we are using new WP_Query we aren't stomping on the 
+ * original $wp_query and it does not need to be reset with 
+ * wp_reset_query(). We just need to set the post data back up with
+ * wp_reset_postdata().
+ */
+wp_reset_postdata();
+
+?>	<?php	
+			if ( have_posts() ) : 
+			
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -32,7 +107,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'category' );
 
 			endwhile;
 
@@ -46,8 +121,10 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	
+	
 	</div>
-	<div class="small-12 medium-4 large-4 columns">	
+	<div class="small-12 medium-4 large-4 columns sidebarcontainer">	
 <?php
 get_sidebar();
 ?>

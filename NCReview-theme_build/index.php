@@ -16,7 +16,7 @@ get_header(); ?>
 	<div class="small-12 medium-8 large-8 columns nopadding content-container">
 					<div id="primary" class="content-area">
 								<main id="main" class="site-main" role="main">
-							<!-- Art and Photgraphy Post Code Starts here -->
+							<!-- Home Page Code Starts here -->
 									<?php $homequery = new WP_Query( array( 'pagename' => 'homepage') );?>
 									<?php if ( $homequery->have_posts() ) : ?>
 											<!-- pagination here -->
@@ -27,8 +27,9 @@ get_header(); ?>
 																	</div>
 											<?php endwhile;?>
 									<?php endif; ?>
-									
+									<!-- Home Page Code Ends here -->
 									<!-- Art and Photgraphy Post Code Starts here -->
+								
 									<?php $apquery = new WP_Query( array( 'category_name' => 'art-photography', 'tag' => 'current-issue', ) );?>
 									<?php if ( $apquery->have_posts() ) : ?>
 											<!-- pagination here -->
@@ -47,7 +48,7 @@ get_header(); ?>
 													</div>
 													<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+														<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 														<p><?php the_excerpt(); ?></p> 
 														<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
 										</div>
@@ -57,13 +58,13 @@ get_header(); ?>
 										</div>
 										<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+														<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 														<p><?php the_excerpt(); ?></p> 
 														<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
 										</div>
 										<?php } else { ?>
 												<?php the_category(); ?>
-												<h2><?php the_title(); ?></h2>
+												<?php 	the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 											<p><?php the_excerpt(); ?></p>	
 										<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
 										<?php } ?>
@@ -95,15 +96,15 @@ get_header(); ?>
 													</div>
 													<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+														<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																			<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-														<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
+														<a href="category/fiction/" class="button expand">See More Fiction</a>
 										</div>
 													<?php } elseif ( has_post_thumbnail() ) { ?>
 										<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+												<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
 															<a href="category/fiction/" class="button expand">See More Fiction</a>
@@ -113,7 +114,7 @@ get_header(); ?>
 										</div>		
 										<?php } else { ?>
 												<?php the_category(); ?>
-												<h2><?php the_title(); ?></h2>
+												<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																<h3 class="author-title">By <?php the_field('author'); ?></h3>
 											<p><?php the_excerpt(); ?></p>	
 												<a href="category/fiction/" class="button expand">See More Fiction</a>
@@ -147,10 +148,10 @@ get_header(); ?>
 													</div>
 													<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+														<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																			<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-														<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
+														<a href="category/news-and-notes/" class="button expand">See More News and Notes</a>
 										</div>
 													<?php } elseif ( has_post_thumbnail() ) { ?>
 										<div class="small-12 columns medium-5 large-5 columns left-postimage">
@@ -158,18 +159,18 @@ get_header(); ?>
 										</div>	
 											<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+														<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																	<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-															<a href="category/fiction/" class="button expand">See More Fiction</a>
+															<a href="category/news-and-notes/" class="button expand">See More News and Notes</a>
 										</div>
 									
 										<?php } else { ?>
 												<?php the_category(); ?>
-												<h2><?php the_title(); ?></h2>
+												<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																<h3 class="author-title">By <?php the_field('author'); ?></h3>
 											<p><?php the_excerpt(); ?></p>	
-												<a href="category/fiction/" class="button expand">See More Fiction</a>
+												<a href="category/news-and-notes/" class="button expand">See More News and Notes</a>
 										<?php } ?>
 									
 						</div>			
@@ -193,10 +194,10 @@ get_header(); ?>
 													?>
 													<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+													<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 														<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-														<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
+														<a href="category/non-fiction/" class="button expand">See More Non-Fiction</a>
 										</div>
 											<div class="small-12 columns medium-5 large-5 columns right-postimage">	
 												<ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2 mini-photogallery" data-clearing>
@@ -209,20 +210,20 @@ get_header(); ?>
 													<?php } elseif ( has_post_thumbnail() ) { ?>
 										<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+																<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-															<a href="category/fiction/" class="button expand">See More Fiction</a>
+															<a href="category/non-fiction/" class="button expand">See More Non-Fiction</a>
 										</div>
 										<div class="small-12 columns medium-5 large-5 columns right-postimage">
 														<?php the_post_thumbnail();?> 
 										</div>		
 										<?php } else { ?>
 												<?php the_category(); ?>
-												<h2><?php the_title(); ?></h2>
+												<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 											<h3 class="author-title">By <?php the_field('author'); ?></h3>
 											<p><?php the_excerpt(); ?></p>	
-												<a href="category/fiction/" class="button expand">See More Fiction</a>
+												<a href="category/non-fiction/" class="button expand">See More Non-Fiction</a>
 										<?php } ?>
 									
 						</div>			
@@ -253,10 +254,10 @@ get_header(); ?>
 													</div>
 													<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+															<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																			<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-														<a href="category/art-photography/" class="button expand">See More Art and Photography</a>
+														<a href="category/poetry/" class="button expand">See More Poetry</a>
 										</div>
 													<?php } elseif ( has_post_thumbnail() ) { ?>
 										<div class="small-12 columns medium-5 large-5 columns left-postimage">
@@ -264,18 +265,18 @@ get_header(); ?>
 										</div>	
 											<div class="small-12 columns medium-7 large-7 columns">
 														<?php the_category(); ?>
-														<h3><?php the_title(); ?></h3>
+														<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																	<h4 class="author-title">By <?php the_field('author'); ?></h4>
 														<p><?php the_excerpt(); ?></p> 
-															<a href="category/fiction/" class="button expand">See More Fiction</a>
+															<a href="category/poetry/" class="button expand">See More Poetry</a>
 										</div>
 									
 										<?php } else { ?>
 												<?php the_category(); ?>
-												<h2><?php the_title(); ?></h2>
+												<?php 	the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 																<h3 class="author-title">By <?php the_field('author'); ?></h3>
 											<p><?php the_excerpt(); ?></p>	
-												<a href="category/fiction/" class="button expand">See More Fiction</a>
+												<a href="category/poetry/" class="button expand">See More Poetry</a>
 										<?php } ?>
 									
 						</div>			
