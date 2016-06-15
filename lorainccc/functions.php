@@ -45,6 +45,7 @@ function lorainccc_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'lorainccc' ),
+		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
 	) );
 
 	/*

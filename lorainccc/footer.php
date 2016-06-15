@@ -12,16 +12,16 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		  <div class="row text-center medium-text-left">
-    <div class="large-3 medium-3 columns"> <img class="footer-logo" src="images/icons/lccclogo_white.svg" alt="" width="220" height="42.5"/>
+    <div class="large-3 medium-3 columns"> <img class="footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccclogo_white.svg" alt="" width="220" height="42.5"/>
       <h2>Connect with LCCC</h2>
       <ul class="menu footer-sm-links">
-        <li><a href="#" target="_blank"><img src="images/icons/facebook_white.svg" height="30" width="30" alt="" /></a></li>
-        <li><a href="#" target="_blank"><img src="images/icons/twitter_white.svg" height="30" width="30" alt="" /></a></li>
-        <li><a href="#" target="_blank"><img src="images/icons/linkedin_white.svg" height="30" width="30" alt="" /></a></li>
-        <li><a href="#" target="_blank"><img src="images/icons/pinterest_white.svg" height="30" width="30" alt="" /></a></li>
-        <li><a href="#" target="_blank"><img src="images/icons/instagram_white.svg" height="30" width="30" alt="" /></a></li>
+        <li><a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook_white.svg" height="30" width="30" alt="" /></a></li>
+        <li><a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/twitter_white.svg" height="30" width="30" alt="" /></a></li>
+        <li><a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/linkedin_white.svg" height="30" width="30" alt="" /></a></li>
+        <li><a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/pinterest_white.svg" height="30" width="30" alt="" /></a></li>
+        <li><a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/instagram_white.svg" height="30" width="30" alt="" /></a></li>
       </ul>
-      <a href="#" target="_blank" class="clearfix mobile-app-link"><img src="images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
+      <a href="#" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
       <h2>LCCC'S<br />
         Mobile App</h2>
       </a> </div>

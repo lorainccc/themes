@@ -45,6 +45,7 @@ function lorainccc_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'lorainccc' ),
+		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
 	) );
 
 	/*
@@ -117,9 +118,9 @@ add_action( 'wp_enqueue_scripts', 'lorainccc_foundation_scripts' );
 function lorainccc_scripts() {
 	wp_enqueue_style( 'lorainccc-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'lorainccc-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'lorainccc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'lorainccc-skip-link-focus-fix', get_stylesheet_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'lorainccc-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
