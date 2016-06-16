@@ -31,3 +31,29 @@ position:static;
 width:auto; 
 height:auto; 
 } 
+
+.ql-icon {
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: .78125rem .78125rem;
+}
+
+.ql-1 {
+	
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-az_blue.svg);	
+}
+
+.ql-2 {
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg);	
+}
+/* 
+We did not have the canvas icon that was in the design.
+Once you have the icon, place in icon folder and update the css rule below for .ql-3
+*/
+.ql-3 {
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg);	
+}
+
+.ql-4 {
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-campuslife_blue.svg);	
+}
