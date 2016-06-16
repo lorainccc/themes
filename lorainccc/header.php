@@ -37,13 +37,22 @@
       </form>
     </div>
   </div>
-  <div class="medium-blue-bg show-for-medium">
+<div class="medium-blue-bg show-for-medium">
     <div class="row">
       <div class="large-12 columns">
         <nav class="menu-centered">
-          <ul class="menu dropdown" data-dropdown-menu>
-           			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-          </ul>
+									<?php
+          wp_nav_menu(array(
+											'container' => false,
+											'menu' => __( 'Primary', 'textdomain' ),
+											'menu_class' => 'dropdown menu',
+											'theme_location' => 'topbar-menu',
+											'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+											//Recommend setting this to false, but if you need a fallback...
+											'fallback_cb' => 'lc_topbar_menu_fallback',
+											'walker' => new lc_top_bar_menu_walker,
+												));
+											?>
         </nav>
       </div>
     </div>
@@ -71,8 +80,9 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'mobile-primary', 'menu_id' => 'mobile-primary-menu' ) ); ?>
     </ul>
   </div>
-		
-	
+
+		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

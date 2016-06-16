@@ -14,3 +14,20 @@ input[type=search], input[type=search]:focus {
     background-repeat: no-repeat;
     background-position: .75rem .45rem;
 }
+
+a.skip-link.screen-reader-text
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+a.skip-link.screen-reader-text:focus
+{ 
+position:static; 
+width:auto; 
+height:auto; 
+} 

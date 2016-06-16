@@ -47,7 +47,6 @@ function lorainccc_setup() {
 		'primary' => esc_html__( 'Primary', 'lorainccc' ),
 		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
 	) );
-
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -103,12 +102,12 @@ add_action( 'widgets_init', 'lorainccc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lorainccc_foundation_scripts() {
-	 	wp_enqueue_style( 'foundation-app',  get_template_directory_uri() . '/foundation/css/app.css' );
-		wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
+	 wp_enqueue_style( 'foundation-app',  get_template_directory_uri() . '/foundation/css/app.css' );
 		wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
+		wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
 
-		wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
-		wp_enqueue_script( 'foundation-modernizr-	js', get_template_directory_uri() . 	'/foundation/js/vendor/modernizr.js', 	array( 'jquery' ), '1', true );
+		wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/vendor/foundation.js', array( 'jquery' ), '1', true );
+		wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation/js/vendor/what-input.js', array( 'jquery' ), '1', true);
 
 		wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 
@@ -117,10 +116,6 @@ add_action( 'wp_enqueue_scripts', 'lorainccc_foundation_scripts' );
 
 function lorainccc_scripts() {
 	wp_enqueue_style( 'lorainccc-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'lorainccc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'lorainccc-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -152,5 +147,32 @@ require get_stylesheet_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_stylesheet_directory() . '/inc/jetpack.php';
+
+class lc_top_bar_menu_walker extends Walker_Nav_Menu
+{
+	/*
+	 * Add vertical menu class and submenu data attribute to sub menus
+	 */
+
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"vertical menu\" data-submenu>\n";
+	}
+}
+
+//Optional fallback
+function lc_topbar_menu_fallback($args)
+{
+	/*
+	 * Instantiate new Page Walker class instead of applying a filter to the
+	 * "wp_page_menu" function in the event there are multiple active menus in theme.
+	 */
+
+	$walker_page = new Walker_Page();
+	$fallback = $walker_page->walk(get_pages(), 0);
+	$fallback = str_replace("<ul class='children'>", '<ul class="children submenu menu vertical" data-submenu>', $fallback);
+
+	echo '<ul class="dropdown menu" data-dropdown-menu">'.$fallback.'</ul>';
+}
 
 ?>
