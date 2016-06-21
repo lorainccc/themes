@@ -10,9 +10,7 @@
  *
  * @package LCCC Framework
  */
-
 get_header(); 
-
 ?>
 
 	<div id="primary" class="content-area">
@@ -20,22 +18,15 @@ get_header();
   <div class="home-hero">
     <div class="row">
 				&nbsp;
-			</div>
+		</div>
   </div>
   <section class="cta-icons">
-    <div class="row">
-      <div class="medium-3 columns text-center"> <a href="#" class="yellow-icon float-center"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/icon-apply_white.svg" alt="" width="65" height="65" /></a>
-        <div class="icon-label">Apply Now</div>
-      </div>
-      <div class="medium-3 columns text-center"> <a href="#" class="yellow-icon float-center"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/icon-register_white.svg" alt="" width="65" height="65" /></a>
-        <div class="icon-label">Register for Classes</div>
-      </div>
-      <div class="medium-3 columns text-center"> <a href="#" class="yellow-icon float-center"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/icon-programscareers.svg" alt="" width="65" height="65" /></a>
-        <div class="icon-label">Programs &amp; Careers</div>
-      </div>
-      <div class="medium-3 columns text-center"> <a href="#" class="yellow-icon float-center"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/icon-money_white.svg" alt="" width="65" height="65" /></a>
-        <div class="icon-label">Paying for College</div>
-      </div>
+    <div class="row icon-container">
+					<?php if ( is_active_sidebar( 'cta-icons-sidebar' ) ) { ?>
+								<ul id="sidebar">
+											<?php dynamic_sidebar( 'cta-icons-sidebar' ); ?>
+								</ul>
+					<?php } ?>
     </div>
   </section>
   <section class="row">
@@ -192,6 +183,4 @@ get_header();
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

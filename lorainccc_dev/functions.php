@@ -95,6 +95,51 @@ function lorainccc_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+		register_sidebar( array(
+		'name'          => esc_html__( 'Dashboard Icons Sidebar', 'lorainccc' ),
+		'id'            => 'cta-icons-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'LCCC Spotlights Sidebar', 'lorainccc' ),
+		'id'            => 'lccc-spotlights-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+		register_sidebar( array(
+		'name'          => esc_html__( 'LCCC Highlights Sidebar', 'lorainccc' ),
+		'id'            => 'lccc-highlights-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+			register_sidebar( array(
+		'name'          => esc_html__( 'LCCC Events Sidebar', 'lorainccc' ),
+		'id'            => 'lccc-events-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+				register_sidebar( array(
+		'name'          => esc_html__( 'LCCC Announcements Sidebar', 'lorainccc' ),
+		'id'            => 'lccc-announcements-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'lorainccc_widgets_init' );
 
