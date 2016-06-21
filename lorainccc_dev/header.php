@@ -77,7 +77,19 @@
   </div>
   <div id="responsive-menu" class="show-for-small-only">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
-			<?php wp_nav_menu( array( 'theme_location' => 'mobile-primary', 'menu_id' => 'mobile-primary-menu' ) ); ?>
+
+					<?php 	wp_nav_menu(array(
+													'container' => false,
+													'menu' => __( 'Drill Menu', 'textdomain' ),
+													'menu_class' => 'vertical menu',
+													'theme_location' => 'mobile-primary',
+													'menu_id' => 'mobile-primary-menu',
+														//Recommend setting this to false, but if you need a fallback...
+													'fallback_cb' => 'lc_drill_menu_fallback',
+													'walker' => new lc_drill_menu_walker(),
+												));
+					?>
+
     </ul>
   </div>
 

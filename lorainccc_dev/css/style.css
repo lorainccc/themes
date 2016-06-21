@@ -104,7 +104,22 @@ header .submenu li{text-align:left}header .dropdown.menu .submenu li:hover{backg
 header .dropdown.menu .submenu li:hover a{color:#0c3b78}header li.is-submenu-item:not(.is-drilldown-submenu-item) a{color:#fefefe;font-size:.75rem}
 header li.is-drilldown-submenu-item{padding:0}header .dropdown.menu .submenu.first-sub{left:-1rem}
 header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header .dropdown.menu>li.is-dropdown-submenu-parent>a::after{display:none}
-.medium-blue-bg{width:100%;background:#0055a5;margin-top:1.5rem}/*!
+.medium-blue-bg{width:100%;background:#0055a5;margin-top:1.5rem}li.divider:after{content:"|";color:#5593db}
+.ql-icon{background-position:left center;background-repeat:no-repeat;background-size:.78125rem .78125rem}
+.ql-1{background-image:url(../images/icons/icon-az_blue.svg)}.ql-2{background-image:url(../images/icons/icon-faculty_blue.svg)}
+.ql-3{background-image:url(../images/icons/icon-faculty_blue.svg)}.ql-4{background-image:url(../images/icons/icon-campuslife_blue.svg)}
+.top-bar{background:#0c3b78;box-shadow:0 2px 1px -1px #fefefe;-webkit-box-shadow:0 2px 1px -1px #fefefe;position:relative;-moz-box-shadow:0 2px 1px -1px #fefefe;z-index:1000}
+.top-bar img{margin-left:20px}.top-bar .top-bar-title{padding:5px 0}.top-bar .toggle-topbar.menu-icon a:after{box-shadow:0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;content:"";display:block;height:0;position:absolute;right:0;top:0;width:16px}
+.top-bar .toggle-topbar.menu-icon a{color:#fff;height:34px;line-height:33px;padding:0 25px 0 0;position:relative}
+.menu-icon{position:relative;display:inline-block;vertical-align:middle;cursor:pointer;width:20px;height:16px}
+.menu-icon::after{content:'';position:absolute;display:block;width:100%;height:2px;background:#fefefe;top:0;left:0;box-shadow:0 7px 0 #fefefe,0 14px 0 #fefefe}
+.menu-icon:hover::after{background:#cacaca;box-shadow:0 7px 0 #cacaca,0 14px 0 #cacaca}
+.menu-icon.dark{position:relative;display:inline-block;vertical-align:middle;cursor:pointer;width:20px;height:16px}
+.menu-icon.dark::after{content:'';position:absolute;display:block;width:100%;height:2px;background:#0a0a0a;top:0;left:0;box-shadow:0 7px 0 #0a0a0a,0 14px 0 #0a0a0a}
+.menu-icon.dark:hover::after{background:#8a8a8a;box-shadow:0 7px 0 #8a8a8a,0 14px 0 #8a8a8a}
+.toggle-icon{margin-right:.5rem}.minus{display:none}.ql-link a#quick-link:link{color:#0c3b78 !important;cursor:pointer}
+#mobile-search{box-shadow:inset 0 0 2px #000}#quick-links{background:#e6e6e6}.mobile-nav-bar{background:#0c3b78;padding-top:1rem;padding-bottom:.5rem}
+.is-drilldown{margin-bottom:15px}/*!
 Section 6: Footer
 */footer{margin-top:5rem;background:#0c3b78;width:100%;padding:2rem 0 4rem 0;font-size:.75rem}
 footer h2{font-size:.75rem;color:#ffc600;text-transform:uppercase;font-weight:700}

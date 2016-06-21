@@ -148,6 +148,8 @@ require get_stylesheet_directory() . '/inc/customizer.php';
  */
 require get_stylesheet_directory() . '/inc/jetpack.php';
 
+/* Menu Functions */
+
 class lc_top_bar_menu_walker extends Walker_Nav_Menu
 {
 	/*
@@ -175,4 +177,30 @@ function lc_topbar_menu_fallback($args)
 	echo '<ul class="dropdown menu" data-dropdown-menu">'.$fallback.'</ul>';
 }
 
+class lc_drill_menu_walker extends Walker_Nav_Menu
+{
+	/*
+	 * Add vertical menu class
+	 */
+	 
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"vertical menu\">\n";
+	}
+}
+ 
+function lc_drill_menu_fallback($args)
+{
+	/*
+	 * Instantiate new Page Walker class instead of applying a filter to the
+	 * "wp_page_menu" function in the event there are multiple active menus in theme.
+	 */
+	 
+	$walker_page = new Walker_Page();
+	$fallback = $walker_page->walk(get_pages(), 0);
+	$fallback = str_replace("children", "children vertical menu", $fallback);
+	echo '<ul class="vertical menu" data-drilldown="">'.$fallback.'</ul>';
+}
+
+/* End Menu Functions */
 ?>
