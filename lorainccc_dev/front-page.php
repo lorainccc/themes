@@ -12,7 +12,6 @@
  */
 get_header(); 
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
   <div class="home-hero">
@@ -30,97 +29,26 @@ get_header();
     </div>
   </section>
   <section class="row">
-    <div class="large-6 columns service-box">
-      <div class="row" data-equalizer="business" data-equalize-on="medium">
-        <div class="large-7 medium-4 columns service-box-image" data-equalizer-watch="business"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/lgbox_servicesbusiness.jpg" alt="" /> </div>
-        <div class="large-5 medium-8 columns service-box-copy text-center" data-equalizer-watch="business">
-          <div class="service-box-container">
-            <div class="service-box-header">
-              <h2>Services for <span>Business</span></h2>
-            </div>
-            <div class="service-box-body">
-              <p>LCCC provides business and individuals with a wide range of training and business support services.</p>
-            </div>
-            <a href="#" class="button">Learn More</a> </div>
-        </div>
-      </div>
-      <div class="yellow-bottom-border"></div>
-    </div>
-    <div class="large-6 columns service-box">
-      <div class="row" data-equalizer="community" data-equalize-on="medium">
-        <div class="large-7 medium-4 columns service-box-image" data-equalizer-watch="community"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/lgbox_servicescommunity.jpg" alt="" /> </div>
-        <div class="large-5 medium-8 columns service-box-copy text-center" data-equalizer-watch="community">
-          <div class="service-box-container">
-            <div class="service-box-header">
-              <h2>Services for <span>Community</span></h2>
-            </div>
-            <div class="service-box-body">
-              <p>Community outreach events at LCCC and in the community provide a way for every member of the community to enjoy and experience their community college.</p>
-            </div>
-            <a href="#" class="button">Learn More</a> </div>
-        </div>
-      </div>
-      <div class="yellow-bottom-border"></div>
-    </div>
+   	<?php if ( is_active_sidebar( 'lccc-spotlights-sidebar' ) ) { ?>
+						<?php dynamic_sidebar( 'lccc-spotlights-sidebar' ); ?>
+				<?php } ?>
   </section>
   <div class="column row">
     <hr />
   </div>
   <section class="row link-box-row">
-    <div class="large-3 medium-6 small-12 columns link-box text-center"> <a href="#" class="box-link"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hp_smsquares_radiology.jpg" alt="" />
-      <div class="link-box-label green">University Partnership</div>
-      </a> </div>
-    <div class="large-3 medium-6 small-12 columns link-box text-center"> <a href="#" class="box-link"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hp_smsquares_stocker.jpg" alt="" />
-      <div class="link-box-label purple">Stocker Arts Center</div>
-      </a> </div>
-    <div class="large-3 medium-6 small-12 columns link-box text-center"> <a href="#" class="box-link"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hp_smsquares_servicemen.jpg" alt="" />
-      <div class="link-box-label teal">Lorem Ipsum Dolar</div>
-      </a> </div>
-    <div class="large-3 medium-6 small-12 columns link-box text-center"> <a href="#" class="box-link"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hp_smsquares_womensbasketball.jpg" alt="" />
-      <div class="link-box-label orange">Lorem Ipsum Dolar</div>
-      </a> </div>
+<?php if ( is_active_sidebar( 'lccc-highlights-sidebar' ) ) { ?>
+						<?php dynamic_sidebar( 'lccc-highlights-sidebar' ); ?>
+				<?php } ?>
   </section>
   <div class="column row">
     <hr />
   </div>
   <section class="row news-feed" id="home-news">
     <div class="large-8 medium-8 columns home-left">
-      <h2>In the News</h2>
-      <article>
-        <div class="row">
-          <div class="medium-3 columns featured-image text-center medium-text-left"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thumbnail_building.jpg" alt="" /> </div>
-          <div class="medium-9 columns">
-            <h3 class="post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci, finibus in purus nec, pretium blandit tellus. Praesent elementum egestas lorem, ac iaculis leo euismod nec. Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci, finibus in purus nec, pretium blandit tellus. Praesent elementum egestas lorem, ac iaculis leo euismod nec. Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Donec ut ipsum congue, Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Donec ut ipsum congue. </p>
-            <a href="#" class="read-more">Continue Reading</a> </div>
-        </div>
-      </article>
-      <div class="column row">
-        <hr />
-      </div>
-      <article>
-        <div class="row">
-          <div class="medium-3 columns featured-image text-center medium-text-left"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thumbnail_building.jpg" alt="" /> </div>
-          <div class="medium-9 columns">
-            <h3 class="post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci, finibus in purus nec, pretium blandit tellus. Praesent elementum egestas lorem, ac iaculis leo euismod nec. Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci, finibus in purus nec, pretium blandit tellus. Praesent elementum egestas lorem, ac iaculis leo euismod nec. Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Donec ut ipsum congue, Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Donec ut ipsum congue. </p>
-            <a href="#" class="read-more">Continue Reading</a> </div>
-        </div>
-      </article>
-      <div class="column row">
-        <hr />
-      </div>
-      <article>
-        <div class="row">
-          <div class="medium-3 columns featured-image text-center medium-text-left"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thumbnail_building.jpg" alt="" /> </div>
-          <div class="medium-9 columns">
-            <h3 class="post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci, finibus in purus nec, pretium blandit tellus. Praesent elementum egestas lorem, ac iaculis leo euismod nec. Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque orci, finibus in purus nec, pretium blandit tellus. Praesent elementum egestas lorem, ac iaculis leo euismod nec. Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Donec ut ipsum congue, Nulla ipsum enim, mollis vitae odio lobortis, elementum dictum ex. Donec ut ipsum congue. </p>
-            <a href="#" class="read-more">Continue Reading</a> </div>
-        </div>
-      </article>
-      <div class="row column text-center"><a href="#" class="button all-news">View All News</a> </div>
-      
+<?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
+						<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
+				<?php } ?>
     </div>
     <aside class="large-4 medium-4 columns">
       <div class="aside-header text-center">

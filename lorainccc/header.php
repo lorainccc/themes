@@ -21,7 +21,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		  <div class="row show-for-medium">
-    <div class="large-6 medium-6 columns"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/LCCC-Logo.png" height="70" width="325" alt="Lorain County Community College Logo" /> </div>
+    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/LCCC-Logo.png" height="70" width="325" alt="Lorain County Community College Logo" /></a>  </div>
     <div class="large-6 medium-6 columns">
       <ul id="header-menu" class="menu align-right">
         <li><a href="#" class="ql-icon ql-1">A-Z Index</a></li>
