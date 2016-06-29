@@ -25,10 +25,10 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mylccc-theme' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">			
+	<header id="masthead" class="site-header" role="banner">
 		<div class="row show-for-medium-up header-row">
 		<div class="medium-12 large-9 columns site-branding">
-			<div class="medium-2 large-2 columns site-logo">
+			<div class="medium-3 large-2 columns site-logo">
 			<?php
 			$url = home_url();
 			?>
@@ -36,9 +36,13 @@
 			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="Logo" />
 			</a>
 			</div>
-			<div class="medium-10 large-10 columns site-branding-title">
-				<?php $blog_title = get_bloginfo(); ?>
-				<h1><?php echo $blog_title; ?></h1>
+			<div class="site-header-main">
+			<div class="medium-9 large-10 columns site-branding-title">
+				<?php //$blog_title = get_bloginfo(); ?>
+				<h1><?php bloginfo('name'); ?></h1>
+				<?php $description = get_bloginfo( 'description', 'display' ); ?>
+				<p class="site-description"><?php echo $description; ?></p>
+			</div>
 			</div>
 			</div><!-- .site-branding -->
 					<div class="medium-4 large-3 columns header-social-links show-for-medium-up">
@@ -55,7 +59,7 @@
 	<nav class="top-bar" data-topbar role="navigation">
          <ul class="title-area">
             <li class="name show-for-small-only">
-               
+
             </li>
             <!-- Mobile Menu Toggle -->
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
@@ -65,9 +69,9 @@
     	<ul class="left">
 						<li>
     	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-     </li>	
+     </li>
 					</ul>
-					 <ul class="left"> <li></li> 
+					 <ul class="left"> <li></li>
            </ul>
      </section>
     </nav>
