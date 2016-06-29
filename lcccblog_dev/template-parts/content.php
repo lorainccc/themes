@@ -8,7 +8,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="small-12 medium-12 large-12 columns">
+	<div class="small-12 medium-12 large-12 columns contentheader">
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -18,7 +18,7 @@
 			}
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php the_time('F jS, Y') ?>
+			<p>Post on: <?php the_time('F j, Y') ?> </p>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

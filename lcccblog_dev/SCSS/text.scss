@@ -1,22 +1,22 @@
 //@import 'color.scss';
 /*Section 6 Text */
-$latofont: Lato, sans-serif;
-$pt-sansfont: PT Sans, sans-serif;
+$body_font: Open Sans, sans-serif;
+$header_font: Raleway, sans-serif;
 
 p{
   word-break: break-word;
-	font-family: $latofont;
+	font-family: $body_font;
 }
 
 a{
-font-family: $latofont;
+font-family: $body_font;
 }
 
 .top-bar-section ul li>a {
-font-family: $latofont;
+font-family: $body_font;
 }
 h1 ,h2 ,h3, h4, h4 ,h5, h6 ,h7 {
-font-family: $pt-sansfont;
+font-family: $header_font;
 }
 h3.footer-connect{
 color: #fff; text-align: center;
@@ -48,6 +48,10 @@ p.event-time{font-size: 1.2rem;}
 .eventslist a h3.eventtitle {color: #008cba;}
 .eventslist a{color: #008cba; text-decoration: underline;}
 .mobile-title h1{word-break:break-word; text-align: center; font-size: 1.7rem;margin-top: -15px;}
-.site-branding-title h1{ margin-left: -15px;
-    margin-top: 24px;
+.site-branding-title h1{ margin-left: -1px;
+    margin-top: 6px;
     font-size: 2.4rem;}
+.entry-title a {
+ font-family: $header_font;
+ font-size: 2.75rem;
+}
