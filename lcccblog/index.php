@@ -38,6 +38,9 @@ get_header(); ?>
 		<?php endif; ?>
 								</main><!-- #main -->
 					</div><!-- #primary -->
+  <?php $numberposts = $wp_query->found_posts ; 
+	if($numberposts > 2){
+?>
 	<div class="small-12 medium-12 large-12 columns">
 				<div class="show-for-medium-up">				
 									<h4>Post Navigation</h4>
@@ -47,6 +50,7 @@ get_header(); ?>
 						<?php the_posts_navigation(); ?>
 				</div>
 		</div>
+  <?php } ?>
 	</div>
 	<div class="small-12 medium-4 large-4 columns sidebarcontainer">
 				<?php get_sidebar(); ?>
