@@ -1,5 +1,9 @@
-index.php
-hello.php
+/index.php
+/hello.php
 /twentyfifteen
 /twentyfourteen
 /twentysixteen
+/node_modules
+/gulpfile.js
+/package.json
+
