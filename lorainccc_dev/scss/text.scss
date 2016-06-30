@@ -3,40 +3,40 @@ Text Section
 */
 h1 {
 	font-size: 2.1875rem;
-	margin-top: .25rem;
+	margin-top: .25rem;	
 }
 
 h1, h2 {
 	color: 	$medium-blue;
 	font-weight: $font-bold;
-
+	
 }
 
 h2 {
 	line-height: 110%;
-	margin-top: .25rem;
+	margin-top: .25rem;	
 	font-size: 1.625rem;
 }
 
 h2.cta-h2 {
-	text-transform: uppercase;
+	text-transform: uppercase;	
 }
 
 p {
 	font-weight: $font-medium;
-	font-size: .8125rem;
+	font-size: .8125rem;	
 }
 
 @media screen and (max-width: 39.9375em) {
 	h1 {
-		font-size: 1.35rem;
+		font-size: 1.35rem;	
 		line-height: 105%;
 	}
 }
 
 /*! Base Typography */
 
-
+$header-font-family: "Raleway", sans-serif;
 $header-font-weight: $font-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
