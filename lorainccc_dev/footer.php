@@ -26,11 +26,11 @@
         Mobile App</h2>
       </a> </div>
     <div class="large-3 medium-3 columns">
-      <h2>Contact LCC</h2>
-      <p>1234 Street Address<br />
-        City Name, ST 12345<br />
-        (123) 456-7890<br />
-        <a href="mailto:email@emailaddress.com">email@emailaddress.com</a> </p>
+      <h2>Contact LCCC</h2>
+      <p>1005 N Abbe Rd<br />
+        Elyria, OH 44035<br />
+        1-800-995-LCCC<br />
+        <a href="mailto:webmaster@lorainccc.edu">webmaster@lorainccc.edu</a> </p>
       <ul class="underline">
         <li><a href="#">Map and Directions</a></li>
         <li><a href="#">Contact LCCC</a></li>
@@ -38,26 +38,23 @@
       </ul>
     </div>
     <div class="large-3 medium-3 columns">
-      <h2>Campus Locations</h2>
-      <ul>
-        <li><a href="#">Elyria</a></li>
-        <li><a href="#">Lorain City Center</a></li>
-        <li><a href="#">Lorain at Lorain High School</a></li>
-        <li><a href="#">Midpoint</a></li>
-        <li><a href="#">North Ridgeville</a></li>
-        <li><a href="#">Wellington</a></li>
-      </ul>
+     <h2>Campus Locations</h2>
+     <!-- lc_footer_campus_locations -->
+									<?php
+          wp_nav_menu(array(
+											'container' => false,
+											'menu' => __( 'Footer Campus Locations', 'textdomain' ),
+											'menu_class' => 'menu row',
+											'theme_location' => 'footer-campus-locations',
+											'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+											//Recommend setting this to false, but if you need a fallback...
+											'walker' => new lc_footer_campus_locations,
+												));
+											?>
     </div>
     <div class="large-3 medium-3 columns">
       <h2>Quick Links</h2>
-      <ul class="underline">
-        <li><a href="#">University Partnership</a></li>
-        <li><a href="#">Athletics</a></li>
-        <li><a href="#">Employment</a></li>
-        <li><a href="#">Veterans</a></li>
-        <li><a href="#">Giving</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
+      <?php wp_nav_menu( array( 'theme_location' => 'footer-quicklinks' ) ); ?>
     </div>
   </div>
 </footer><!-- #colophon -->
