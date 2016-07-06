@@ -85,4 +85,3 @@
 		<?php $blog_title = get_bloginfo(); ?>
 				<h1><?php echo $blog_title; ?></h1>
 		</div>
-
