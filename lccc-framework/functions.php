@@ -105,6 +105,7 @@ function lccc_framework_scripts() {
 	/* Add Foundation CSS */
 	
 	wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
+		wp_enqueue_style( 'foundation-app', get_template_directory_uri() . '/foundation/css/app.css' );
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/foundation/css/foundation.min.css' );
 	
 	/* Add Custom CSS */
@@ -146,21 +147,21 @@ add_action( 'wp_enqueue_scripts', 'lccc_framework_scripts' );
 
 /**
  * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
+require get_template_directory() . '/inc/template-tags.php';
+ */
 /**
  * Custom functions that act independently of the theme templates.
- */
+ 
 require get_template_directory() . '/inc/extras.php';
-
+*/
 /**
  * Customizer additions.
- */
+ 
 require get_template_directory() . '/inc/customizer.php';
-
+*/
 /**
  * Load Jetpack compatibility file.
- */
 require get_template_directory() . '/inc/jetpack.php';
+*/
 add_theme_support( 'post-thumbnails' );

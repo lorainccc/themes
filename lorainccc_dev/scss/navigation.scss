@@ -1,0 +1,247 @@
+/*!
+Section 5: Navigation
+*/
+
+@media screen and (min-width: 40em) {
+	
+	header {
+	padding-top: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 1074px) {
+	nav.menu-centered {
+		height: 36px;	
+	}
+}
+
+header {
+		
+	
+	nav a, nav a:hover {
+		color: $white;
+		font-size: .875rem;
+		font-weight: $font-semibold;
+	}
+	
+	
+	
+	ul#header-menu li a {
+		font-size: .78125rem;	
+		color: $medium-blue;
+		font-weight: $font-bold;
+		
+	}
+	
+	.menu:not(#header-menu):not(.vertical) li:hover, .dropdown.menu .submenu {
+		background: $dark-blue;	
+		border: none;
+		
+		
+	}
+	
+	
+	li.is-submenu-item {
+		padding: .5rem 0;
+		border-top: 1px solid $medium-blue;	
+	}
+	
+	
+	.submenu {
+		margin-top: -1px;	
+	}
+	
+	.submenu li {
+			
+		text-align: left;
+	}
+		
+	.dropdown.menu .submenu li:hover {
+		background: $white !important;
+		border-top: 1px solid $medium-blue !important;
+		
+		a {
+			color: $dark-blue;
+		}
+			
+	}
+		
+	li.is-submenu-item:not(.is-drilldown-submenu-item) a {
+		color: $white;
+		font-size: .75rem;	
+	}	
+		
+	li.is-drilldown-submenu-item {
+		padding: 0;	
+	}
+	
+	
+	.dropdown.menu .submenu.first-sub {
+		left: -1rem;	
+		
+	}
+	.dropdown.menu > li.is-dropdown-submenu-parent > a {
+		padding-right: 1rem;	
+	}
+	.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    
+    display: none;
+  
+	}
+
+}
+
+.medium-blue-bg {
+	width: 100%;
+	background: $medium-blue;
+	margin-top: 1.5rem;	
+}
+
+li.divider:after {
+	content: "|";
+	color: $light-blue;	
+	
+}
+
+.ql-icon {
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: .78125rem .78125rem;
+}
+
+.ql-1 {
+	
+	background-image: url(../images/icons/icon-az_blue.svg);	
+}
+
+.ql-2 {
+	background-image: url(../images/icons/icon-faculty_blue.svg);	
+}
+/* 
+We did not have the canvas icon that was in the design.
+Once you have the icon, place in icon folder and update the css rule below for .ql-3
+*/
+.ql-3 {
+	background-image: url(../images/icons/icon-faculty_blue.svg);	
+}
+
+.ql-4 {
+	background-image: url(../images/icons/icon-campuslife_blue.svg);	
+}
+
+.top-bar {
+	background: $dark-blue;	
+	box-shadow: 0 2px 1px -1px $white;
+	-webkit-box-shadow: 0 2px 1px -1px $white;
+	position:relative;
+	-moz-box-shadow: 0 2px 1px -1px $white;
+	z-index: 1000;
+	img {
+		margin-left: 20px;
+		
+	}
+	.top-bar-title {
+		padding: 5px 0;	
+	}
+}
+
+.top-bar .toggle-topbar.menu-icon a:after {
+	box-shadow: 0 10px 0 1px #FFFFFF, 0 16px 0 1px #FFFFFF, 0 22px 0 1px #FFFFFF;
+	content: "";
+	display: block;
+	height: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 16px;
+}
+.top-bar .toggle-topbar.menu-icon a {
+	color: #FFFFFF;
+	height: 34px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	position: relative;
+}
+
+.menu-icon {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	width:20px;
+	height:16px;
+	
+}
+.menu-icon::after {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:2px;
+	background:#fefefe;
+	top:0;
+	left:0;
+	box-shadow:0 7px 0 #fefefe,0 14px 0 #fefefe;
+	
+}
+.menu-icon:hover::after {
+	background:#cacaca;
+	box-shadow:0 7px 0 #cacaca,0 14px 0 #cacaca
+}
+.menu-icon.dark {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	width:20px;
+	height:16px
+}
+.menu-icon.dark::after {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:2px;
+	background:#0a0a0a;
+	top:0;
+	left:0;
+	box-shadow:0 7px 0 #0a0a0a,0 14px 0 #0a0a0a
+}
+.menu-icon.dark:hover::after {
+	background:#8a8a8a;
+	box-shadow:0 7px 0 #8a8a8a,0 14px 0 #8a8a8a
+}
+
+.toggle-icon {
+	margin-right: .5rem;	
+}
+
+.minus {
+	display: none;	
+}
+
+.ql-link a#quick-link:link {
+	color: $dark-blue !important;
+	cursor: pointer;	
+}
+
+#mobile-search {
+	-moz-box-shadow:    inset 0 0 2px #000000;
+   -webkit-box-shadow: inset 0 0 2px #000000;
+   box-shadow:         inset 0 0 2px #000000;
+}
+
+#quick-links  {
+	background: $light-gray;	
+}
+
+.mobile-nav-bar {
+	background: $dark-blue;	
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+}
+
+
+.is-drilldown {
+	margin-bottom: 15px;
+}
