@@ -38,8 +38,11 @@ h2.cta-h2{text-transform:uppercase}p{font-weight:500;font-size:.8125rem}@media s
 Section 1: Foundation
 *//*!
 Section 2: Content
-*/a.button{margin:0 0 1rem 0}
-.home-hero{width:100%;background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;height:450px}
+*/.eventcontainer .eventhumbnail{padding-top:12px;padding-left:0;padding-right:.5rem}
+.entry-footer{background:#fff}article{background:#fff}.sidebar-widget{padding-top:2.7rem}
+.breadcrumb-container{padding-top:20px;padding-left:2rem}a.button{margin:0 0 1rem 0}
+.lccc_event_header{background:#0c3b78;color:#fefefe;margin-top:0;padding:0 0 .5rem 1.5rem}
+#home-news h2.headertext{margin:0}.home-hero{width:100%;background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;height:450px}
 .hero-image{width:100%;background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover}
 .gateway{background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg)}
 @media screen and (max-width:39.9375em){.white-panel{margin-top:3rem}}.white-panel{padding:2rem 2rem 4rem 2rem;background:rgba(255,255,255,0.9)}
@@ -123,8 +126,10 @@ header li.is-drilldown-submenu-item{padding:0}header .dropdown.menu .submenu.fir
 header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header .dropdown.menu>li.is-dropdown-submenu-parent>a::after{display:none}
 .medium-blue-bg{width:100%;background:#0055a5;margin-top:1.5rem}li.divider:after{content:"|";color:#5593db}
 .ql-icon{background-position:left center;background-repeat:no-repeat;background-size:.78125rem .78125rem}
-.ql-1{background-image:url(../images/icons/icon-az_blue.svg)}.ql-2{background-image:url(../images/icons/icon-faculty_blue.svg)}
-.ql-3{background-image:url(../images/icons/icon-faculty_blue.svg)}.ql-4{background-image:url(../images/icons/icon-campuslife_blue.svg)}
+.ql-1{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-az_blue.svg)}
+.ql-2{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
+.ql-3{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
+.ql-4{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-campuslife_blue.svg)}
 .top-bar{background:#0c3b78;box-shadow:0 2px 1px -1px #fefefe;-webkit-box-shadow:0 2px 1px -1px #fefefe;position:relative;-moz-box-shadow:0 2px 1px -1px #fefefe;z-index:1000}
 .top-bar img{margin-left:20px}.top-bar .top-bar-title{padding:5px 0}.top-bar .toggle-topbar.menu-icon a:after{box-shadow:0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;content:"";display:block;height:0;position:absolute;right:0;top:0;width:16px}
 .top-bar .toggle-topbar.menu-icon a{color:#fff;height:34px;line-height:33px;padding:0 25px 0 0;position:relative}
@@ -136,9 +141,23 @@ header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header 
 .menu-icon.dark:hover::after{background:#8a8a8a;box-shadow:0 7px 0 #8a8a8a,0 14px 0 #8a8a8a}
 .toggle-icon{margin-right:.5rem}.minus{display:none}.ql-link a#quick-link:link{color:#0c3b78 !important;cursor:pointer}
 #mobile-search{box-shadow:inset 0 0 2px #000}#quick-links{background:#e6e6e6}.mobile-nav-bar{background:#0c3b78;padding-top:1rem;padding-bottom:.5rem}
-.is-drilldown{margin-bottom:15px}/*!
+.is-drilldown{margin-bottom:15px}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+.main-navigation ul{border-top:1px solid rgba(51,51,51,0.1);border-bottom:1px solid rgba(51,51,51,0.1);list-style:none;margin:0}
+.main-navigation .nav-menu>ul>li:first-child,.main-navigation .nav-menu>li:first-child{border-top:0}
+.main-navigation li{border-top:1px solid #eaeaea;border-top:1px solid rgba(51,51,51,0.1);position:relative;min-height:40px}
+.main-navigation a{padding:.5em 0}.main-navigation .menu-item-has-children>a{padding-right:38px}
+.dropdown-toggle:after{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-family:"Genericons";font-size:16px;font-style:normal;font-weight:normal;font-variant:normal;line-height:1;speak:none;text-align:center;text-decoration:inherit;text-transform:none;vertical-align:top}
+.main-navigation ul .toggled-on{display:block}.dropdown-toggle{background-color:transparent;border:0;box-sizing:content-box;content:"";height:42px;padding:0;position:absolute;text-transform:lowercase;top:3px;right:0;width:42px}
+.dropdown-toggle:after{color:#333;content:"\f431";font-size:24px;line-height:42px;position:relative;top:0;left:1px;width:42px}
+.dropdown-toggle:hover,.dropdown-toggle:focus{background-color:#eaeaea;background-color:rgba(51,51,51,0.1)}
+.dropdown-toggle:focus{outline:1px solid #c1c1c1;outline:1px solid rgba(51,51,51,0.3)}
+.dropdown-toggle.toggle-on:after{content:"\f432"}.dropdown-toggle{height:32px;top:4px;width:32px}
+.dropdown-toggle:after{font-size:16px;line-height:24px;width:24px}.main-navigation ul ul{margin-left:1em;border-top:0;border-bottom:0;display:none}
+.clear:before,.clear:after,.site:before,.site:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-content:before,.site-content:after,.nav-links:before,.nav-links:after,.comment-navigation:before,.comment-navigation:after,.social-navigation ul:before,.social-navigation ul:after,.textwidget:before,.textwidget:after{content:"";display:table}
+.clear:after,.site:after,.entry-content:after,.comment-content:after,.site-content:after,.nav-links:after,.comment-navigation:after,.social-navigation ul:after,.textwidget:after{clear:both}
+ul.sub-menu{padding-top:15px}/*!
 Section 6: Footer
-*/footer{margin-top:5rem;background:#0c3b78;width:100%;padding:2rem 0 4rem 0;font-size:.75rem}
+*/footer{margin-top:5rem;background:#0c3b78;padding:2rem 0 4rem 0;font-size:.75rem}
 footer h2{font-size:.75rem;color:#ffc600;text-transform:uppercase;font-weight:700}
 footer .menu>li>a{padding:0 .25rem 0 0}footer a,footer p{color:#fefefe;font-size:.75rem}
 footer .footer-logo{margin-bottom:2.5rem}footer ul{list-style:none;margin-left:0}

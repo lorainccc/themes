@@ -51,61 +51,9 @@ get_header();
 				<?php } ?>
     </div>
     <aside class="large-4 medium-4 columns">
-      <div class="aside-header text-center">
-        <h3><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccc_white.svg" alt="" height="45" width="67.5" /> Events</h3>
-      </div>
-      <div class="recent-events">
-        <div class="row event">
-          <div class="large-2 medium-3 small-2 columns text-center">
-            <div class="calendar-icon"> <span class="month">Jan</span> <span class="day">24</span> </div>
-          </div>
-          <div class="large-10 medium-9 small-10 columns">
-            <h4>Lorem Ipsum Entrepreneurial</h4>
-            <p>Lorem ipsum dolar sit amet, consectetur.</p>
-            <a href="#" class="read-more">More Details</a> </div>
-        </div>
-        <div class="event-divider"></div>
-        <div class="row event">
-          <div class="large-2 medium-3 small-2 columns text-center">
-            <div class="calendar-icon"> <span class="month">Feb</span> <span class="day">04</span> </div>
-          </div>
-          <div class="large-10 medium-9 small-10 columns">
-            <h4>Lorem Ipsum Entrepreneurial</h4>
-            <p>Lorem ipsum dolar sit amet, consectetur.</p>
-            <a href="#" class="read-more">More Details</a> </div>
-        </div>
-        <div class="event-divider"></div>
-        <div class="row event">
-          <div class="large-2 medium-3 small-2 columns text-center">
-            <div class="calendar-icon"> <span class="month">May</span> <span class="day">11</span> </div>
-          </div>
-          <div class="large-10 medium-9 small-10 columns">
-            <h4>Lorem Ipsum Entrepreneurial</h4>
-            <p>Lorem ipsum dolar sit amet, consectetur.</p>
-            <a href="#" class="read-more">More Details</a> </div>
-        </div>
-        <div class="event-divider"></div>
-        <div class="row event">
-          <div class="large-2 medium-3 small-2 columns text-center">
-            <div class="calendar-icon"> <span class="month">Jul</span> <span class="day">18</span> </div>
-          </div>
-          <div class="large-10 medium-9 small-10 columns">
-            <h4>Lorem Ipsum Entrepreneurial</h4>
-            <p>Lorem ipsum dolar sit amet, consectetur.</p>
-            <a href="#" class="read-more">More Details</a> </div>
-        </div>
-        <div class="event-divider"></div>
-        <div class="row event">
-          <div class="large-2 medium-3 small-2 columns text-center">
-            <div class="calendar-icon"> <span class="month">Oct</span> <span class="day">14</span> </div>
-          </div>
-          <div class="large-10 medium-9 small-10 columns">
-            <h4>Lorem Ipsum Entrepreneurial</h4>
-            <p>Lorem ipsum dolar sit amet, consectetur.</p>
-            <a href="#" class="read-more">More Details</a> </div>
-        </div>
-        <div class="text-center"><a class="button" href="#">View All Events</a></div>
-      </div>
+<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
+						<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
+				<?php } ?>
     </aside>
   </section>
 			
