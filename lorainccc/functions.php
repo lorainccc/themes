@@ -47,8 +47,6 @@ function lorainccc_setup() {
 		'primary' => esc_html__( 'Primary', 'lorainccc' ),
 		'left-nav' => esc_html__( 'Left Nav', 'lorainccc' ),
 		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
-  'footer-campus-locations' => esc_html__( 'Footer Campus Locations Menu', 'lorainccc' ),
-  'footer-quicklinks' => esc_html__( 'Footer Quicklinks Menu', 'lorainccc' ),
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -92,6 +90,15 @@ function lorainccc_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'lorainccc' ),
 		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+		register_sidebar( array(
+		'name'          => esc_html__( 'Gateway Menu Sidebar', 'lorainccc' ),
+		'id'            => 'gateway-menu-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -237,90 +244,24 @@ class lc_drill_menu_walker extends Walker_Nav_Menu
 	/*
 	 * Add vertical menu class
 	 */
-
+	 
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"vertical menu\">\n";
 	}
 }
-
+ 
 function lc_drill_menu_fallback($args)
 {
 	/*
 	 * Instantiate new Page Walker class instead of applying a filter to the
 	 * "wp_page_menu" function in the event there are multiple active menus in theme.
 	 */
-
+	 
 	$walker_page = new Walker_Page();
 	$fallback = $walker_page->walk(get_pages(), 0);
 	$fallback = str_replace("children", "children vertical menu", $fallback);
 	echo '<ul class="vertical menu" data-drilldown="">'.$fallback.'</ul>';
-}
-
-class lc_footer_campus_locations extends Walker_Nav_Menu
-{
-/**
-	 * Start the element output.
-	 *
-	 * @param  string $output Passed by reference. Used to append additional content.
-	 * @param  object $item   Menu item data object.
-	 * @param  int $depth     Depth of menu item. May be used for padding.
-	 * @param  array $args    Additional strings.
-	 * @return void
-	 */
-	public function start_el( &$output, $item, $depth, $args )
-	{
-		$output     .= '<li class="column">';
-		$attributes  = '';
-		! empty ( $item->attr_title )
-			// Avoid redundant titles
-			and $item->attr_title !== $item->title
-			and $attributes .= ' title="' . esc_attr( $item->attr_title ) .'"';
-		! empty ( $item->url )
-			and $attributes .= ' href="' . esc_attr( $item->url ) .'"';
-		$attributes  = trim( $attributes );
-		$title       = apply_filters( 'the_title', $item->title, $item->ID );
-		$item_output = "$args->before<a $attributes>$args->link_before$title</a>"
-						. "$args->link_after$args->after";
-		// Since $output is called by reference we don't need to return anything.
-		$output .= apply_filters(
-			'walker_nav_menu_start_el'
-			,   $item_output
-			,   $item
-			,   $depth
-			,   $args
-		);
-	}
-	/**
-	 * @see Walker::start_lvl()
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @return void
-	 */
-	public function start_lvl( &$output )
-	{
-		$output .= '<ul class="sub-menu">';
-	}
-	/**
-	 * @see Walker::end_lvl()
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @return void
-	 */
-	public function end_lvl( &$output )
-	{
-		$output .= '</ul>';
-	}
-	/**
-	 * @see Walker::end_el()
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @return void
-	 */
-	function end_el( &$output )
-	{
-		$output .= '</li>';
-	}
 }
 
 /* End Menu Functions */
