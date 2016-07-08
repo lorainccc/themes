@@ -1,15 +1,11 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Standard Sub Page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package LCCC Framework
+ * @package WordPress
+ * @subpackage lorainccc
+ * @since Lorainccc 1.0
  */
-
 get_header(); ?>
 <div class="row page-content">
 <div class="small-12 medium-12 large-12 columns breadcrumb-container">
@@ -17,9 +13,6 @@ get_header(); ?>
 </div>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
-		<h3>SIDEBAR MENU</h3>
-		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
 	<div id="secondary" class="secondary">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
@@ -55,11 +48,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>	
-		<div class="small-12 columns hide-for-medium-up">
-				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
-							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
-				<?php } ?>
-	</div>
+	
 </div>
 <?php get_footer(); ?>
-
