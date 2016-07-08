@@ -89,7 +89,6 @@
 													'walker' => new lc_drill_menu_walker(),
 												));
 					?>
-
     </ul>
   </div>
 
