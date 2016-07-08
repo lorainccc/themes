@@ -22,7 +22,7 @@ get_header();
   <section class="cta-icons">
     <div class="row icon-container">
 					<?php if ( is_active_sidebar( 'cta-icons-sidebar' ) ) { ?>
-								<ul id="sidebar">
+								<ul id="sidebar" style="position: relative;">
 											<?php dynamic_sidebar( 'cta-icons-sidebar' ); ?>
 								</ul>
 					<?php } ?>

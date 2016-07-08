@@ -93,7 +93,7 @@
 			button.removeAttr( 'aria-controls' );
 		}
 	}
-
+/*
 	// Sidebar scrolling.
 	function resize() {
 		windowWidth = $window.width();
@@ -173,6 +173,6 @@
 		for ( var i = 1; i < 6; i++ ) {
 			setTimeout( resizeAndScroll, 100 * i );
 		}
-	} );
+	} );*/
 
 } )( jQuery );

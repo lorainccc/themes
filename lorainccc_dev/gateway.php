@@ -26,18 +26,23 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>
-	<div class="small-12 medium-8 large-8 columns">		
-			<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
+	<div class="small-12 medium-6 large-8 columns">		
+			<?php if ( is_active_sidebar( 'gateway-menu-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'gateway-menu-sidebar' ); ?>
 				<?php } ?>
 	</div>
-	<div class="small-12 medium-4 large-4 columns">
+	<div class="small-12 medium-6 large-4 columns">
 <div class="small-12 medium-12 large-12 columns">
 		<?php get_sidebar(); ?>
 		</div>
 	<div class="small-12 medium-12 large-12 columns">
 			<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
+				<?php } ?>
+	</div>
+			<div class="small-12 medium-12 large-12 columns">
+			<?php if ( is_active_sidebar( 'sub-site-announcements-sidebar' ) ) { ?>
+							<?php dynamic_sidebar( 'sub-site-announcements-sidebar' ); ?>
 				<?php } ?>
 	</div>
 	</div>
