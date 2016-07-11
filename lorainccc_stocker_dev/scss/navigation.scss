@@ -1,0 +1,388 @@
+/*!
+Section 5: Navigation
+*/
+@media screen and (min-width: 40em) {
+	
+	header {
+	padding-top: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 1074px) {
+	nav.menu-centered {
+		height: 36px;	
+	}
+}
+
+header {
+		
+	
+	nav a, nav a:hover {
+		color: $white;
+		font-size: .875rem;
+		font-weight: $font-semibold;
+	}
+	
+	
+	
+	ul#header-menu li a {
+		font-size: .78125rem;	
+		color: $medium-blue;
+		font-weight: $font-bold;
+		
+	}
+	
+	.menu:not(#header-menu):not(.vertical) li:hover, .dropdown.menu .submenu {
+		background: $dark-blue;	
+		border: none;
+		
+		
+	}
+	
+	
+	li.is-submenu-item {
+		padding: .5rem 0;
+		border-top: 1px solid $medium-blue;	
+	}
+	
+	
+	.submenu {
+		margin-top: -1px;	
+	}
+	
+	.submenu li {
+			
+		text-align: left;
+	}
+		
+	.dropdown.menu .submenu li:hover {
+		background: $white !important;
+		border-top: 1px solid $medium-blue !important;
+		
+		a {
+			color: $dark-blue;
+		}
+			
+	}
+		
+	li.is-submenu-item:not(.is-drilldown-submenu-item) a {
+		color: $white;
+		font-size: .75rem;	
+	}	
+		
+	li.is-drilldown-submenu-item {
+		padding: 0;	
+	}
+	
+	
+	.dropdown.menu .submenu.first-sub {
+		left: -1rem;	
+		
+	}
+	.dropdown.menu > li.is-dropdown-submenu-parent > a {
+		padding-right: 1rem;	
+	}
+	.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    
+    display: none;
+  
+	}
+
+}
+
+.medium-blue-bg {
+	width: 100%;
+	background: $medium-blue;
+	margin-top: 1.5rem;	
+}
+
+li.divider:after {
+	content: "|";
+	color: $light-blue;	
+	
+}
+
+.ql-icon {
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: .78125rem .78125rem;
+}
+
+.ql-1 {
+	
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-az_blue.svg);	
+}
+
+.ql-2 {
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg);	
+}
+/* 
+We did not have the canvas icon that was in the design.
+Once you have the icon, place in icon folder and update the css rule below for .ql-3
+*/
+.ql-3 {
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg);	
+}
+
+.ql-4 {
+	background-image: url(/wp-content/themes/lorainccc/images/icons/icon-campuslife_blue.svg);	
+}
+
+.top-bar {
+	background: $dark-blue;	
+	box-shadow: 0 2px 1px -1px $white;
+	-webkit-box-shadow: 0 2px 1px -1px $white;
+	position:relative;
+	-moz-box-shadow: 0 2px 1px -1px $white;
+	z-index: 1000;
+	img {
+		margin-left: 20px;
+		
+	}
+	.top-bar-title {
+		padding: 5px 0;	
+	}
+}
+
+.top-bar .toggle-topbar.menu-icon a:after {
+	box-shadow: 0 10px 0 1px #FFFFFF, 0 16px 0 1px #FFFFFF, 0 22px 0 1px #FFFFFF;
+	content: "";
+	display: block;
+	height: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 16px;
+}
+.top-bar .toggle-topbar.menu-icon a {
+	color: #FFFFFF;
+	height: 34px;
+	line-height: 33px;
+	padding: 0 25px 0 0;
+	position: relative;
+}
+
+.menu-icon {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	width:20px;
+	height:16px;
+	
+}
+.menu-icon::after {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:2px;
+	background:#fefefe;
+	top:0;
+	left:0;
+	box-shadow:0 7px 0 #fefefe,0 14px 0 #fefefe;
+	
+}
+.menu-icon:hover::after {
+	background:#cacaca;
+	box-shadow:0 7px 0 #cacaca,0 14px 0 #cacaca
+}
+.menu-icon.dark {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	width:20px;
+	height:16px
+}
+.menu-icon.dark::after {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:2px;
+	background:#0a0a0a;
+	top:0;
+	left:0;
+	box-shadow:0 7px 0 #0a0a0a,0 14px 0 #0a0a0a
+}
+.menu-icon.dark:hover::after {
+	background:#8a8a8a;
+	box-shadow:0 7px 0 #8a8a8a,0 14px 0 #8a8a8a
+}
+
+.toggle-icon {
+	margin-right: .5rem;	
+}
+
+.minus {
+	display: none;	
+}
+
+.ql-link a#quick-link:link {
+	color: $dark-blue !important;
+	cursor: pointer;	
+}
+
+#mobile-search {
+	-moz-box-shadow:    inset 0 0 2px #000000;
+   -webkit-box-shadow: inset 0 0 2px #000000;
+   box-shadow:         inset 0 0 2px #000000;
+}
+
+#quick-links  {
+	background: $light-gray;	
+}
+
+.mobile-nav-bar {
+	background: $dark-blue;	
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+}
+
+.is-drilldown {
+	margin-bottom: 15px;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+.main-navigation ul {
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+	    list-style: none;
+    margin: 0;
+}
+.main-navigation .nav-menu > ul > li:first-child, .main-navigation .nav-menu > li:first-child {
+    border-top: 0;
+}
+.main-navigation li {
+    border-top: 1px solid #eaeaea;
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+    position: relative;
+				min-height: 40px;
+}
+.main-navigation a {
+    padding: 0.5em 0;
+}
+.main-navigation .menu-item-has-children > a {
+    padding-right: 38px;
+}
+.dropdown-toggle:after{
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: top;
+}
+.main-navigation ul .toggled-on {
+	display: block;
+}
+
+.dropdown-toggle {
+	background-color: transparent;
+	border: 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	content: "";
+	height: 42px;
+	padding: 0;
+	position: absolute;
+	text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+	top: 3px;
+	right: 0;
+	width: 42px;
+}
+.dropdown-toggle:after {
+	color: #333;
+	content: "\f431";
+	font-size: 24px;
+	line-height: 42px;
+	position: relative;
+	top: 0;
+	left: 1px;
+	width: 42px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: #eaeaea;
+	background-color: rgba(51, 51, 51, 0.1);
+}
+
+.dropdown-toggle:focus {
+	outline: 1px solid #c1c1c1;
+	outline: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.dropdown-toggle.toggle-on:after {
+	content: "\f432";
+}
+.dropdown-toggle {
+    height: 32px;
+    top: 4px;
+    width: 32px;
+}
+	.dropdown-toggle:after {
+		font-size: 16px;
+		line-height: 24px;
+		width: 24px;
+	}
+.main-navigation ul ul {
+    margin-left: 1em;
+				border-top: 0;
+    border-bottom: 0;
+	    display: none;
+}
+/**
+ * 9.0 Clearings
+ */
+
+.clear:before,
+.clear:after,
+.site:before,
+.site:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-content:before,
+.site-content:after,
+.nav-links:before,
+.nav-links:after,
+.comment-navigation:before,
+.comment-navigation:after,
+.social-navigation ul:before,
+.social-navigation ul:after,
+.textwidget:before,
+.textwidget:after {
+	content: "";
+	display: table;
+}
+
+.clear:after,
+.site:after,
+.entry-content:after,
+.comment-content:after,
+.site-content:after,
+.nav-links:after,
+.comment-navigation:after,
+.social-navigation ul:after,
+.textwidget:after {
+	clear: both;
+} 
+ul.sub-menu{padding-top: 15px;}
