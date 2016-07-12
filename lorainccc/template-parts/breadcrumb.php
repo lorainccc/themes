@@ -1,4 +1,5 @@
 <?php
+
    //LCCC Custom Breadcrumb Display Code
   if (function_exists('lccc_breadcrumb')){
     if (is_home() || is_front_page()) {

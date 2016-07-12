@@ -55,7 +55,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>	
-		<div class="small-12 columns hide-for-medium-up">
+		<div class="small-12 columns show-for-smaall-only">
 				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 				<?php } ?>

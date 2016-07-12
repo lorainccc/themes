@@ -33,16 +33,13 @@ get_header(); ?>
 				?>
 			</nav><!-- .main-navigation -->
 				<?php endif; ?>
+		</div>
 		<?php endif; ?>
-		
-	</div>
-	</div>
-	<div class="small-12 medium-12 large-12 columns">
-				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
-							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
+			<?php if ( is_active_sidebar( 'stocker-page-events-sidebar' ) ) { ?>
+							<?php dynamic_sidebar( 'stocker-page-events-sidebar' ); ?>
 				<?php } ?>
 	</div>
-	</div>			
+	</div>
 	<div class="small-12 medium-8 large-8 columns">		
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -55,9 +52,9 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>	
-		<div class="small-12 columns hide-for-medium-up">
-				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
-							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
+		<div class="small-12 columns show-for-small-only">
+				<?php if ( is_active_sidebar( 'stocker-page-events-sidebar' ) ) { ?>
+							<?php dynamic_sidebar( 'stocker-page-events-sidebar' ); ?>
 				<?php } ?>
 	</div>
 </div>

@@ -114,18 +114,28 @@ function lorainccc_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-		register_sidebar( array(
-		'name'          => esc_html__( 'Stocker Site Highlight Sidebar', 'lorainccc' ),
-		'id'            => 'stocker-highlight-sidebar',
+			register_sidebar( array(
+		'name'          => esc_html__( 'LCCC Events Sidebar', 'lorainccc' ),
+		'id'            => 'lccc-events-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-			register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Events Sidebar', 'lorainccc' ),
-		'id'            => 'lccc-events-sidebar',
+					register_sidebar( array(
+		'name'          => esc_html__( 'Stocker Page Events Sidebar', 'lorainccc' ),
+		'id'            => 'stocker-page-events-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );	
+		
+		register_sidebar( array(
+		'name'          => esc_html__( 'Stocker Slider Sidebar', 'lorainccc' ),
+		'id'            => 'stocker-slider-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -256,4 +266,17 @@ function lc_drill_menu_fallback($args)
 }
 
 /* End Menu Functions */
+// CHANGE EXCERPT LENGTH FOR DIFFERENT POST TYPES
+ 
+function custom_excerpt_length($length) {
+    global $post;
+    if ($post->post_type == 'lccc_event')
+    return 30;
+    else if ($post->post_type == 'lccc_announcement')
+    return 30;
+    else
+    return 40;
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
 ?>
