@@ -9,7 +9,6 @@
 
 ?>
 <?php 
-$whattodisplay = 'lccc-event';
 				$today = getdate();
 				$currentDay = $today['mday'];
 				$month = $today['mon'];
@@ -88,9 +87,6 @@ $location = event_meta_box_get_meta('event_meta_box_event_location');
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="small-12 medium-12 large-12 columns">
-   <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-    </div>
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
@@ -101,39 +97,28 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 			echo '</div>';	
 		?>
  </div>
-	<div class="small-12 medium-10 large-10 columns nopadding">
+	<div class="small-12 medium-4 large-3 columns nopadding">
 	<header class="entry-header">
+        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
         <?php the_category( ', ' ); ?>
         <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
         <p><?php echo 'Cost: '.$cost; ?></p>
+        <p>&nbsp;</p>
+        <a href="<?php the_permalink();?>">More Information</a>
 	</header><!-- .entry-header -->
 	</div>
- <?php
-    if ( has_post_thumbnail() ) {
-    ?>
-    	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?>
-<?php
-    }?>
-	<div class="small-12 medium-12large-12 columns content-container">
+	<div class="small-12 medium-6 large-7 columns">
 	<div class="entry-content">
-        <div class="small-12 medium-12large-12 columns nopadding">
 		<?php
-			the_content();
-?>
-        </div>
-        <div class="small-12 medium-4 large-4 columns">
-       <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Events </a>';?>
-        </div>
-        <div class="small-12 medium-8 large-8 columns">
-        <?php
+			the_excerpt();
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
 				'after'  => '</div>',
 			) );
 		?>
-        </div>
 	</div><!-- .entry-content -->
 	</div>
 	<?php if ( get_edit_post_link() ) : ?>

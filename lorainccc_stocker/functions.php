@@ -271,9 +271,9 @@ function lc_drill_menu_fallback($args)
 function custom_excerpt_length($length) {
     global $post;
     if ($post->post_type == 'lccc_event')
-    return 30;
+    return 40;
     else if ($post->post_type == 'lccc_announcement')
-    return 30;
+    return 40;
     else
     return 40;
 }

@@ -32,8 +32,8 @@ get_header(); ?>
 				<?php endif; ?>
 		</div>
 		<?php endif; ?>
-			<?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
-							<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
+			<?php if ( is_active_sidebar( 'stocker-page-events-sidebar' ) ) { ?>
+							<?php dynamic_sidebar( 'stocker-page-events-sidebar' ); ?>
 				<?php } ?>
 	</div>
 	</div>
@@ -41,7 +41,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 				<header class="page-header">
-				<h1 class="page-title"> Events</h1>
+				<h1 class="page-title"> Announcements</h1>
 				<?php
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
@@ -71,7 +71,7 @@ get_header(); ?>
 					 */
 			?>
 				<div class="small-12 medium-12 large-12 columns event-list-event-container">
-			<?php get_template_part( 'template-parts/content', 'lccc-event-list' );?>
+			<?php get_template_part( 'template-parts/content', 'lccc_announcement-list' );?>
 			</div>
 
 			<?php endwhile; ?>
