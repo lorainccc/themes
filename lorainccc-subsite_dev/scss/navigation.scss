@@ -350,6 +350,10 @@ Once you have the icon, place in icon folder and update the css rule below for .
 	    display: none;
 }
 
+.menu-navigation-container ul.nav-menu{
+ margin: 41px 0 0 0;
+}
+
 /* Auto-Expand Child Navigation when click on Parent Item */
 .current-menu-item.menu-item-has-children ul {display: block;}
 
