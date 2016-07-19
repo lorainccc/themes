@@ -105,7 +105,7 @@ function lorainccc_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 		register_sidebar( array(
 		'name'          => esc_html__( 'Sub Site Announcement Sidebar', 'lorainccc' ),
 		'id'            => 'sub-site-announcements-sidebar',
@@ -114,7 +114,7 @@ function lorainccc_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );		
+	) );
 		register_sidebar( array(
 		'name'          => esc_html__( 'Dashboard Icons Sidebar', 'lorainccc' ),
 		'id'            => 'cta-icons-sidebar',
@@ -164,9 +164,25 @@ function lorainccc_widgets_init() {
 add_action( 'widgets_init', 'lorainccc_widgets_init' );
 
 /**
+ * Enqueue google fonts.
+ */
+function add_google_fonts() {
+wp_enqueue_style( 'open-sans-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic', false );
+	
+wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', false ); 	
+	
+}
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function lorainccc_foundation_scripts() {
+
+ // Add Genericons, used in the main stylesheet.
+	 wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
+
 	 wp_enqueue_style( 'foundation-app',  get_template_directory_uri() . '/foundation/css/app.css' );
 		wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
 		wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
@@ -177,12 +193,12 @@ function lorainccc_foundation_scripts() {
 		wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 
 	wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
-	
+
 wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );
-	
+
 }
 add_action( 'wp_enqueue_scripts', 'lorainccc_foundation_scripts' );
 
@@ -254,20 +270,20 @@ class lc_drill_menu_walker extends Walker_Nav_Menu
 	/*
 	 * Add vertical menu class
 	 */
-	 
+
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"vertical menu\">\n";
 	}
 }
- 
+
 function lc_drill_menu_fallback($args)
 {
 	/*
 	 * Instantiate new Page Walker class instead of applying a filter to the
 	 * "wp_page_menu" function in the event there are multiple active menus in theme.
 	 */
-	 
+
 	$walker_page = new Walker_Page();
 	$fallback = $walker_page->walk(get_pages(), 0);
 	$fallback = str_replace("children", "children vertical menu", $fallback);
@@ -276,7 +292,7 @@ function lc_drill_menu_fallback($args)
 
 /* End Menu Functions */
 // CHANGE EXCERPT LENGTH FOR DIFFERENT POST TYPES
- 
+
 function custom_excerpt_length($length) {
     global $post;
     if ($post->post_type == 'lccc_event')
