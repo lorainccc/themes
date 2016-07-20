@@ -14,7 +14,10 @@ get_header(); ?>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="secondary">
+		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+   <h3><?php echo bloginfo('the-title'); ?></h3>
+  </div>
+  <div id="secondary" class="secondary">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php

@@ -7,4 +7,5 @@
      echo lccc_breadcrumb() . "<a href='" . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a> > " . get_the_title() ;
     };
    };
+
   ?>
