@@ -46,7 +46,7 @@
 											'container' => false,
 											'menu' => __( 'Primary', 'textdomain' ),
 											'menu_class' => 'dropdown menu',
-											'theme_location' => 'topbar-menu',
+											'theme_location' => 'primary',
 											'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
 											//Recommend setting this to false, but if you need a fallback...
 											'fallback_cb' => 'lc_topbar_menu_fallback',
