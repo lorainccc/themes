@@ -97,7 +97,7 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .blue-panel a.button{background:#5593db}.blue-panel img{width:100%;height:auto;margin-bottom:1rem}
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
-.callout .map-link{margin-top:4.45rem}/*!
+.callout .map-link{margin-top:4.45rem}ul{margin:2.5rem}blockquote{border:0}/*!
 Section 3: Body
 */body{font-family:"Open Sans",sans-serif;font-weight:500;line-height:1.5;color:#606060;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 h1,h2,h3,h4,h5,h6,h7{font-family:"Raleway",sans-serif}/*!

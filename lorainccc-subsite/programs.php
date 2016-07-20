@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Department/Division Page
+ * Template Name: Program Pathways Page
  *
  * @package WordPress
  * @subpackage lorainccc
@@ -33,27 +33,25 @@ get_header(); ?>
 			</nav><!-- .main-navigation -->
 				<?php endif; ?>
 		<?php endif; ?>
-		
-	</div>
-	</div>
-	<!--<div class="small-12 medium-12 large-12 columns">
-				<?php //if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
-							<?php //dynamic_sidebar( 'lccc-events-sidebar' ); ?>
-				<?php //} ?>
-	</div> -->
-	</div>			
-	<div class="small-12 medium-8 large-8 columns">		
+ </div>
+</div>
+</div>
+	<div class="small-12 medium-8 large-8 columns">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'deptdiv' ); ?>
+				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
-
+   
+   <div class="row">&nbsp;</div>
+   
+   <?php get_template_part( 'template-parts/content', 'programpath' ); ?>
+   
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
-	
+</div>
+
 </div>
 <?php get_footer(); ?>
