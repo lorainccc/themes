@@ -4,29 +4,33 @@ Text Section
 h1 {
 	font-size: 2.1875rem;
 	margin-top: .25rem;	
+ font-family: 'Raleway', sans-serif;
 }
 
 h1, h2 {
 	color: 	$medium-blue;
 	font-weight: $font-bold;
-	
+	 font-family: 'Raleway', sans-serif;
 }
 
 h2 {
 	line-height: 110%;
 	margin-top: .25rem;	
 	font-size: 1.625rem;
+ font-family: 'Raleway', sans-serif;
 }
 
 h2.cta-h2 {
 	text-transform: uppercase;	
+ font-family: 'Raleway', sans-serif;
 }
 
 p {
 	font-weight: $font-medium;
 	font-size: .8125rem;	
+	font-family: 'Open Sans', sans-serif;
 }
-
+a{font-family: 'Open Sans', sans-serif;}
 @media screen and (max-width: 39.9375em) {
 	h1 {
 		font-size: 1.35rem;	
