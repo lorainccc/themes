@@ -18,7 +18,11 @@ get_header(); ?>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+<<<<<<< HEAD
 		<h3>SIDEBAR MENU</h3>
+=======
+<h3><?php echo bloginfo('the-title'); ?></h3>
+>>>>>>> stocker-production
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
 	<div id="secondary" class="secondary">
