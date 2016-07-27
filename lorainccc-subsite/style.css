@@ -121,6 +121,7 @@ a.skip-link.screen-reader-text:focus{position:static;width:auto;height:auto}.ql-
 .ql-2{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
 .ql-3{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
 .ql-4{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-campuslife_blue.svg)}
+ul{margin: 2.5rem;}
 /*!
 Section 5: Navigation
 */header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}

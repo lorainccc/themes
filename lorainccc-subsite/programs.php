@@ -33,6 +33,11 @@ get_header(); ?>
 			</nav><!-- .main-navigation -->
 				<?php endif; ?>
 		<?php endif; ?>
+	<div class="small-12 medium-12 large-12 columns">
+				<?php if ( is_active_sidebar( 'lccc-programpathways-sidebar' ) ) { ?>
+							<?php dynamic_sidebar( 'lccc-programpathways-sidebar' ); ?>
+				<?php } ?>
+	</div>
  </div>
 </div>
 </div>
@@ -44,11 +49,11 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
-   
+
    <div class="row">&nbsp;</div>
-   
+
    <?php get_template_part( 'template-parts/content', 'programpath' ); ?>
-   
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>

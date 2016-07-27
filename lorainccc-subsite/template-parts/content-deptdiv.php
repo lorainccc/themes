@@ -13,7 +13,6 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
  <?php
 
   $contactargs = array(
@@ -23,53 +22,77 @@
   );
 
   $contactinfo = new WP_Query($contactargs);
-					if ( $contactinfo->have_posts() ) :
+  if ( $contactinfo->have_posts() ) :
         while ( $contactinfo->have_posts() ) : $contactinfo->the_post();
-
-  $post_id = get_the_ID();
-  $dept_extension = get_post_meta( $post_id, 'lc_dept_extension_field', true );
-  $dept_email = get_post_meta( $post_id, 'lc_dept_email_field', true );
-  $dept_faxnumber = get_post_meta( $post_id, 'lc_dept_fax_number_field', true );
-  $dept_roomnumber = get_post_meta( $post_id, 'lc_dept_room_number_field', true );
-  $dept_office_hours = get_post_meta( $post_id, 'lc_dept_office_hours_field', true );
- 
+  	 $post_id = get_the_ID();
+  	 $dept_extension = get_post_meta( $post_id, 'lc_dept_extension_field', true );
+  	 $dept_email = get_post_meta( $post_id, 'lc_dept_email_field', true );
+  	 $dept_faxnumber = get_post_meta( $post_id, 'lc_dept_fax_number_field', true );
+  	 $dept_building = get_post_meta( $post_id, 'lc_building_field', true );
+	 $dept_roomnumber = get_post_meta( $post_id, 'lc_room_field', true );
+  	 $dept_monday_hours = get_post_meta( $post_id, 'lc_dept_office_hours_monday_field', true );
+ 	 $dept_tuesday_hours = get_post_meta( $post_id, 'lc_dept_office_hours_tuesday_field', true );
+	 $dept_wednesday_hours = get_post_meta( $post_id, 'lc_dept_office_hours_wednesday_field', true );
+	 $dept_thursday_hours = get_post_meta( $post_id, 'lc_dept_office_hours_thursday_field', true );
+	 $dept_friday_hours = get_post_meta( $post_id, 'lc_dept_office_hours_friday_field', true );
+	 $dept_saturday_hours = get_post_meta( $post_id, 'lc_dept_office_hours_saturday_field', true );
+	 $dept_social_facebook = get_post_meta( $post_id, 'lc_social_media_facebook_field', true );
+	 $dept_social_twitter = get_post_meta( $post_id, 'lc_social_media_twitter_field', true );
  ?>
-  <div class="row">
+<div class="row">
    <div class="columns small-12 medium-8 large-8 callout">
     <h2>Contact Information</h2>
     <div class="row">
      <div class="small-12 medium-6 large-6 columns callout-contact-info">
-      <p class="tel">Direct Phone: (440) 366-<?php echo $dept_extension; ?></p>
+      <p><?php echo $dept_building . ', Room ' . $dept_roomnumber; ?> <br />
+      <strong>Phone:</strong> (440) 366-<?php echo $dept_extension; ?><br />
       <?php if ($dept_faxnumber !== '') { ?>
-      <p class="tel">Fax Number: (440) 366-<?php echo $dept_faxnumber; ?></p>
-      <?php } else { ?>
-       <p class="building">Building and Room: (440) 366-<?php echo $dept_roomnumber; ?></p>
+      <strong>Fax Number:</strong> (440) 366-<?php echo $dept_faxnumber; ?><br />
       <?php } ?>
-      <?php if ($dept_faxnumber !== '') { ?>
-      <p class="email">Email: <?php echo $dept_email; ?></p>
-      <?php } ?>
+      <strong>Email:</strong> <?php echo $dept_email; ?></p>
      </div>
      <div class="small-12 medium-6 large-6 columns callout-contact-info">
-      <p class="tel">Toll Free: 1-800-995-5222 ext <?php echo $dept_extension; ?></p>
-      <?php if ($dept_faxnumber !== '') { ?>
-      <p class="building">Building and Room: <?php echo $dept_roomnumber; ?></p>
-      <?php } else { ?>
-      <p class="email">Email: <?php echo $dept_email; ?></p>
-      <?php } ?>
+      <p class="hours">Office Hours: <br />
+						<?php if ($dept_monday_hours !== '') { 
+									echo 'Monday: ' . $dept_monday_hours . '<br />';
+						}
+						if ($dept_tuesday_hours !== '') { 
+									echo 'Tuesday: ' . $dept_tuesday_hours . '<br />';
+						}
+						if ($dept_wednesday_hours !== '') { 
+									echo 'Wednesday: ' . $dept_wednesday_hours . '<br />';
+						}
+						if ($dept_thursday_hours !== '') { 
+									echo 'Thursday: ' . $dept_thursday_hours . '<br />';
+						}
+						if ($dept_friday_hours !== '') { 
+									echo 'Friday: ' . $dept_friday_hours . '<br />';
+						}	
+						if ($dept_saturday_hours !== '') { 
+									echo 'Saturday: ' . $dept_saturday_hours . '<br />';
+						}							
+							?>							
+						</p>						
      </div>
-     <div class="small-12 medium-12 large-12 columns callout-contact-info">
-      <p class="hours">Office Hours: <?php echo $dept_office_hours; ?></p>
+    <div class="small-12 medium-12 large-12 columns callout-contact-info">
+	<?php 
+		if ($dept_social_facebook !== '') {
+			echo '<a href="' . $dept_social_facebook . '" target="_blank">Follow us on Facebook</a><br />';
+		} 
+		if ($dept_social_twitter !== '') {
+			echo '<a href="' . $dept_social_twitter . '" target="_blank">Follow us on Twitter</a>';
+		}
+	?> 
      </div>
     </div>
    </div>
-		</div>
-
+</div>
  <?php
-        endwhile;
-					endif;
+ 
+	endwhile;
  wp_reset_query();
- ?>
-
+endif;
+?>
 	<div class="entry-content">
 		<?php
 			the_content();
