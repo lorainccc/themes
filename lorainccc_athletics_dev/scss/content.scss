@@ -1,0 +1,705 @@
+/*!
+Section 2: Content
+*/
+.pagecontainer{margin-top: .2rem;}
+header.entry-header p{
+    margin-bottom: 0;
+}
+h1.entry-title {
+    line-height: 110%;
+    margin-top: .25rem;
+    font-size: 2.1875rem;
+}
+.event-date p.month{color: #000;font-size: 1.6rem;} 
+.columns.nopadding{padding: 0;}
+.columns.stocker-highlight-container{border-bottom: 5px solid #ffc600;padding: 0;margin-bottom: 40px;}
+.columns.stocker-highlights{padding-top: 30px;}
+.columns.highlight-link{text-align: center;}
+.columns.highlight-content{padding-top: 1rem;min-height: 141px;}
+.columns.stocker-badges-container{padding-top: 30px;}
+.columns.highlight-image{padding: 0;}
+.columns.highlight-text{padding: 0;    -moz-box-shadow: inset 0 0 10px #DCDCDC;
+    -webkit-box-shadow: inset 0 0 10px #DCDCDC;
+    box-shadow: inset 0 0 10px #DCDCDC; }
+.columns.highlight-header{ background: #0c3b78;}
+.columns.highlight-header h3{font-weight: 700;color: #fefefe;padding: 10px 0;font-size: 1.4375rem;text-align: center;}
+.eventcontainer .eventhumbnail{padding-top: 12px;padding-left: 0;padding-right: 0.5rem;}
+.entry-footer{background: #fff;}
+article {
+    background: #fff;
+}
+.gateway-header{padding:0;}
+.sidebar-widget{padding-top: 2.7rem;}
+.breadcrumb-container{
+	padding-top: 20px;
+ padding-left: 2rem;
+}
+a.button {
+	margin: 0 0 1rem 0;	
+}
+.lccc_event_header{
+	background: #0c3b78;
+    color: #fefefe;
+    margin-top: 0;
+    padding: 0 0 .5rem 1.5rem;
+}
+#home-news h2.headertext{margin: 0;} 
+.home-hero {
+	width: 100%;
+	background-image: url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg); 
+	background-position: center center; 
+	background-repeat: no-repeat; 
+	background-attachment: scroll; 
+	background-size: cover;	
+	height: 450px;
+}
+.hero-image {
+	width: 100%;
+	/*height: 315px;*/
+	background-position: center center; 
+	background-repeat: no-repeat; 
+	background-attachment: scroll; 
+	background-size: cover;
+}
+
+.gateway {
+	background-image: url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg);	
+}
+
+@media screen and (max-width: 39.9375em) {
+	.white-panel {
+		margin-top: 3rem;	
+	}
+}
+
+.white-panel {
+	padding: 2rem 2rem 4rem 2rem;
+	background: rgba(255, 255, 255, .9);	
+}
+
+.orbit-bullets button {
+	height: .5rem;
+	width: .5rem;	
+}
+
+.orbit-bullets button.is-active {
+	background: $dark-blue;	
+}
+
+.orbit-slide {
+	h2 {
+		font-size: 2.1875rem;
+		color: $dark-blue;
+		line-height: 100%;
+	}
+	
+	p {
+		font-size: .75rem;
+	}
+	
+}
+
+
+.cta-icons {
+	width: 100%;
+	background-color: $medium-blue;	
+	
+	
+	border-width: 5px 0;
+	border-style: solid;
+	border-color: $yellow;
+	
+	 .icon-label {
+		 font-weight: $font-medium;
+		 color: $white;
+		 font-size: 1.125rem;
+		 margin-top: 1rem;
+	 }
+	 
+	 .row {
+		background-image: url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);
+		background-position: center center; 
+		background-repeat: no-repeat;
+		background-attachment: scroll; 
+		background-size: cover;	
+		padding: 15px 0;
+	 }
+	 
+	 .row .columns {
+		padding: 1.75rem 0;	 
+	 }
+	
+}
+
+@media screen and (max-width: 39.9375em) {
+	.cta-icons {
+		margin-bottom: 2rem;	
+	}
+}
+
+.yellow-icon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: $yellow;
+	-webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	position: relative;
+	
+	img {
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		margin:auto;
+	}
+}
+
+.yellow-icon:hover {
+	background-color: smart-scale($yellow, 10%, 25%);	
+}
+
+.service-box {
+	margin-top: 3rem;	
+}
+
+@media screen and (min-width: 40em) {
+	
+.service-box-copy {
+	padding-left: 0;	
+}
+
+.service-box-image {
+	padding-right: 0;	
+}
+
+.service-box .button {
+		position: absolute;
+		bottom: 1rem;
+		left: 63.5px;
+	}
+	
+	.service-box-container {
+	height: 100%;
+	}
+
+}
+
+.service-box-header h2 {
+	text-transform: uppercase;
+	font-weight: $font-bold;
+	color: $white;
+	font-size: .6875rem;
+	background: $dark-blue;
+	line-height: 170%;
+	padding: 1rem 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	
+	span {
+		display:block;
+		font-size: 1.5625rem;
+		color: $yellow;
+		text-transform: capitalize;
+	}
+	
+}
+
+.service-box-container {
+	
+	-moz-box-shadow:    inset 0 0 10px #DCDCDC;
+   	-webkit-box-shadow: inset 0 0 10px #DCDCDC;
+   	box-shadow:         inset 0 0 10px #DCDCDC;
+}
+
+.service-box-copy {
+	position: relative;	
+	padding: 0;
+}
+
+.service-box-body {
+	font-size: .75rem;
+	padding: 2rem 1rem;
+}
+
+.yellow-bottom-border {
+	width: 97%;
+	height: 5px;
+	background: $yellow;
+	float: left;
+	margin-left: 0.9375rem;
+}
+
+hr {
+  border:none;
+  height: 20px;
+  width: 90%;
+  height: 50px;
+  padding: 2rem 0;
+  box-shadow: 0 15px 15px -15px #DCDCDC;
+  margin: -50px auto 10px; 
+}
+
+.link-box-row {
+	margin-top: 1.125rem;
+}
+
+.link-box {
+	margin-top: 1.875rem;
+	position: relative;	
+	
+}
+
+.link-box img {
+	opacity: 1;
+	z-index: -1;
+}
+
+.link-box:hover img {
+	filter: alpha(opacity=60);
+	opacity:0.6;
+}
+
+.link-box-label {
+	font-size: .875rem;
+	color: $white;
+	font-weight: $font-semibold;
+	padding: .65rem 0;
+}
+
+.green {
+	background: $green;
+}
+
+.purple {
+	background: $purple;
+}
+
+.teal {
+	background: $teal;
+}
+
+.orange {
+	background: $orange;
+}
+
+.medium-blue {
+	background: $medium-blue;
+}
+
+#home-news {
+	h2 {
+		margin: 2rem 0;
+			
+	}
+	
+	.featured-image {
+		margin: .3rem 0;	
+	}
+	
+	h3.post-title {
+		font-size: 1.125rem;
+		color: $medium-blue;
+		font-weight: $font-semibold;
+	}
+	
+	p {
+		font-size: .75rem;	
+		margin-bottom: .25rem;
+	}
+	
+	a.read-more {
+		font-size: .75rem;
+		color: $light-blue;
+		font-weight: $font-extra-bold;
+		text-decoration: underline;	
+		line-height: 100%;
+	}
+	
+	hr {
+		margin: -80px auto 40px;	
+	}
+	
+	a.all-news {
+		margin-top: 3rem;	
+	}
+}
+
+.aside-header {
+	background: $dark-blue;
+	color: $white;	
+	margin-top: 2rem;
+	padding: .5rem 0;
+	
+	h3 {
+		font-size: 1.75rem;
+		font-weight: $font-bold;	
+		margin-bottom: 0;
+	}
+}
+
+.sidebar-menu-header {
+	background: $dark-blue;
+	color: $white;
+	padding: .5rem;
+	
+	h3 {
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	font-weight: $font-bold;
+	margin-bottom: 0;
+	}
+}
+
+.recent-events, .announcements {
+   -moz-box-shadow:    inset 0 0 10px #DCDCDC;
+   -webkit-box-shadow: inset 0 0 10px #DCDCDC;
+   box-shadow:         inset 0 0 10px #DCDCDC;
+   padding: 1rem;
+   
+   h4 {
+		font-size: .75rem;
+		font-weight: $font-extra-bold;  
+		color: $medium-blue; 
+		margin-bottom: .25rem;
+		text-transform: uppercase;
+   }
+   
+   a:not(.button) {
+		font-weight: $font-bold;
+		text-decoration: underline;
+		font-size: .75rem;
+		   
+   }
+   
+   .button {
+	   margin: 3rem 0 0 0;
+   }
+}
+
+.recent-events .event .calendar-icon {
+	width: 45px;
+	height: 45px;
+	background-image: url(/wp-content/themes/lorainccc/images/icons/calendaricon_blue.svg);
+	padding-top: .75rem;
+	
+	span {
+		
+		color: $dark-blue;
+		display: block;
+		line-height: 100%;
+		text-transform: uppercase;
+		font-weight: $font-bold;
+			
+	}
+	
+	.month {
+		font-size: .6rem;
+	}
+	
+	.day {
+		font-size: 1rem;
+	}
+}
+
+.events-feed a.button {
+	margin-top: 1.5rem;	
+}
+
+.events-feed-item {
+	font-size: .75rem;
+	margin-top: 2.5rem;
+	
+	h2 {
+		font-size: 1.25rem;
+	}
+	
+	.add-to-calendar a img {
+		display: inline-block;
+	}
+	
+	.calendar-icon {
+		width: 90px;
+		height: 90px;
+		background-image: url(/wp-content/themes/lorainccc/images/icons/calendaricon_blue.svg);
+		padding: 2rem 1rem;
+		text-align: center;
+		
+		span {
+			color: $dark-blue;
+			display: block;
+			line-height: 100%;
+			text-transform: uppercase;
+			font-weight: $font-bold;
+		}
+		
+		.month {
+			font-size: .8rem;
+		}
+		
+		.day {
+			font-size: 1.75rem;
+		}
+	}
+}
+
+.event-item-info {
+	span {
+		display:block;	
+	}
+	margin-bottom: 1.5rem;
+}
+
+
+.event-item-description {
+	padding-top: 2.15rem;	
+	margin-bottom: 1.5rem;
+}
+
+
+.event-divider {
+	height: .25rem;
+	background: #dcdcdc;
+	width: 100%;	
+	margin: 1rem 0;
+}
+
+.fw-lead {
+	padding: 2.625rem 0;	
+	
+	p {
+		font-size: 1rem;	
+	}
+}
+
+.lead {
+	p {
+		font-size: 1rem;	
+	}
+}
+
+.news-feed {
+	.featured-image img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1rem;	
+	}
+}
+
+
+
+.gateway-links {
+	
+	padding-top: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 -20px 20px -20px rgba(216,216,216,.8);
+	-moz-box-shadow: 0 -20px 20px -20px rgba(216,216,216,.8);
+	-webkit-box-shadow: 0 -20px 20px -20px rgba(216,216,216,.8);
+	 
+	h2 {
+		font-size: 1.5rem;	
+		margin-bottom: 0;
+	}
+	
+	.menu > li > a {
+		font-size: .75rem;
+		color: $light-blue;
+		text-decoration: underline;	
+		padding: .5rem 0;
+		
+	}
+	
+	img {
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+		width: 100%;
+		height: auto;
+			
+	}
+	
+	a {
+		font-size: .8125rem;
+		text-decoration: underline;
+		font-weight: $font-extra-bold;
+	}
+}
+
+.row .row.lccc-badge {
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;	
+	font-size: .75rem;
+	color: $white;
+	margin: 1rem 0 0 0;
+	
+	h3 {
+		font-weight: $font-semibold;
+		font-size: 1.25rem;
+		color: $white;	
+		margin-bottom: .25rem;
+	}
+	
+	.icon {
+		margin-top: .5rem;	
+	}
+}
+
+.crumbs {
+	padding-top: 2rem;
+	padding-bottom: 2rem;	
+	font-size: .8125rem;
+}
+
+
+
+@media screen and (min-width: 40em) {
+	
+aside.columns {
+	padding-right: 0;
+	padding-left: 0;	
+}
+.gateway-main, .home-left {
+	padding-right: 5rem;
+}
+
+
+.main-right {
+	padding-left: 5rem;	
+}
+}
+
+
+.callout-link {
+	color: $medium-blue;
+	text-transform: uppercase;
+	font-size: 	1.25rem;
+	font-weight: $font-extra-bold;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	line-height: 100%;
+	/*position: relative;
+	background: url("../images/icons/icon-video.svg");
+	background-repeat: no-repeat;
+	
+	width: auto;*/
+	img {
+		display: inline-block;
+		margin-right: .5rem;	
+		
+	}
+	a, span {
+		color: $light-blue;	
+	}
+	
+	
+}
+
+.video-container {
+	margin-bottom: 2rem;	
+	position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.is-drilldown {
+	ul li {
+		-moz-box-shadow:    inset 0 0 10px #DCDCDC;
+	    -webkit-box-shadow: inset 0 0 10px #DCDCDC;
+	    box-shadow:         inset 0 0 10px #DCDCDC;
+		
+		border: 1px solid #dcdcdc;
+		
+		a {
+			color: $medium-blue;	
+			font-weight: $font-bold;
+			font-size: 1rem;
+		}
+	}
+}
+
+.is-drilldown-submenu-parent > a::after {
+	border-left-color: $medium-blue;	
+}
+
+.js-drilldown-back > a::before {
+	border-right-color: $medium-blue;	
+}
+
+.sidebar-menu {
+	margin-bottom: 3rem;	
+	margin-top: 1rem;
+}
+
+.mobile-sidebar-bar {
+	padding-top: .5rem;
+	padding-bottom: .5rem;	
+}
+
+.mobile-sidebar-bar {
+	-moz-box-shadow:    inset 0 0 10px #DCDCDC;
+	-webkit-box-shadow: inset 0 0 10px #DCDCDC;
+	box-shadow:         inset 0 0 10px #DCDCDC;
+		
+	border: 1px solid #dcdcdc;
+}
+
+.blue-panel {
+	background: $medium-blue;
+	padding: .9375rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	
+	h2 {
+		color: $yellow;
+		text-transform: uppercase;
+	}
+	
+	p {
+		color: $white;	
+	}
+	
+	a.button {
+		background: $light-blue;	
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1rem;	
+	}
+}
+.callout {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	span {
+		display: block;	
+	}
+	
+	h2 {
+		font-weight: $font-semibold;
+		font-size: 1.25rem;	
+	}
+	
+	.name, .hours-label {
+		font-weight: $font-bold;	
+	}
+	
+	.callout-contact-method {
+		margin-top: 1.35rem;	
+	}
+	
+	.map-link {
+		margin-top: 4.45rem;
+	}
+}
