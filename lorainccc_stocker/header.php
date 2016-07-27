@@ -18,15 +18,14 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
+
 	<header id="masthead" class="site-header" role="banner">
 		  <div class="row show-for-medium">
-    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/LCCC-Logo.png" height="70" width="325" alt="Lorain County Community College Logo" /></a>  </div>
+    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="http://sites.lorainccc.edu/stocker/wp-content/uploads/sites/4/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Lorain County Community College Logo" /></a>  </div>
     <div class="large-6 medium-6 columns">
       <ul id="header-menu" class="menu align-right">
-        <li><a href="#" class="ql-icon ql-1">A-Z Index</a></li>
-        <li><a href="#" class="ql-icon ql-2">Faculty/Staff</a></li>
-        <li><a href="#" class="ql-icon ql-3">Canvas</a></li>
-        <li><a href="#" class="ql-icon ql-4">My Campus</a></li>
+        <li><a href="http://www.lorainccc.edu/" class="ql-icon ql-3" target="_blank">LCCC Home</a></li>
+        <li><a href="https://tickets.lorainccc.edu/public/" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
       <form role="search" method="get" class="search-form" action="">
@@ -45,7 +44,7 @@
 											'container' => false,
 											'menu' => __( 'Primary', 'textdomain' ),
 											'menu_class' => 'dropdown menu',
-											'theme_location' => 'topbar-menu',
+											'theme_location' => 'stocker-primary',
 											'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
 											//Recommend setting this to false, but if you need a fallback...
 											'fallback_cb' => 'lc_topbar_menu_fallback',
@@ -57,7 +56,7 @@
     </div>
   </div>
   <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccclogo_white.svg" alt="" width="165" height="31.875" /></a> </div>
+    <div class="small-8 columns"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="http://sites.lorainccc.edu/stocker/wp-content/uploads/sites/4/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Logo"/></a> </div>
     <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
     <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
@@ -81,7 +80,7 @@
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
 													'menu_class' => 'vertical menu',
-													'theme_location' => 'mobile-primary',
+			'theme_location' => 'stocker-mobile-primary',
 													'menu_id' => 'mobile-primary-menu',
 														//Recommend setting this to false, but if you need a fallback...
 													'fallback_cb' => 'lc_drill_menu_fallback',

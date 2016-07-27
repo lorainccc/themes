@@ -6,6 +6,7 @@
  *
  * @package lorainccc
  */
+
 ?>
 <?php 
 				$today = getdate();
@@ -86,32 +87,23 @@ $location = event_meta_box_get_meta('announcement_meta_box_event_location');
 $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="small-12 medium-2 large-2 columns">
-	<?php
-			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-                           echo '<div class="event-calendar-icon">';
-                            echo '</div>';
-							echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
-							echo '<p class="stocker-day">'.$eventstartday.'</p>';
-			echo '</div>';	
-		?>
+	<div class="small-12 medium-3 large-4 columns">
+	<?php the_post_thumbnail();?>
  </div>
-	<div class="small-12 medium-4 large-3 columns nopadding">
-	<header class="entry-header">
+	<div class="small-12 medium-9 large-8 columns nopadding">
+		<div class="small-12 medium-12 large-12 columns">
+		<header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
         <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
-        <p><?php echo 'Time: '.$starttime; ?></p>
-          <p><?php echo 'Location: '.$location; ?></p>
-        <p>&nbsp;</p>
-        <a href="<?php the_permalink();?>">More Information</a>
 	</header><!-- .entry-header -->
-	</div>
-	<div class="small-12 medium-6 large-7 columns">
+		</div>
+	<div class="small-12 medium-12 large-12 columns">
 	<div class="entry-content">
 		<?php
 			the_excerpt();
-
+		?>
+ <a href="<?php the_permalink();?>">Read More...</a>
+		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
 				'after'  => '</div>',
@@ -119,7 +111,8 @@ $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 		?>
 	</div><!-- .entry-content -->
 	</div>
-	<?php if ( get_edit_post_link() ) : ?>
+	</div>
+		<?php if ( get_edit_post_link() ) : ?>
 
 			<?php
 				edit_post_link(
@@ -134,3 +127,6 @@ $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 			?>
 	<?php endif; ?>
 </article><!-- #post-## -->
+<div class="column row">
+        <hr>
+      </div>

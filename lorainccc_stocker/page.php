@@ -9,6 +9,7 @@
  *
  * @package LCCC Framework
  */
+
 get_header(); ?>
 <div class="row page-content">
 <div class="small-12 medium-12 large-12 columns breadcrumb-container">
@@ -17,7 +18,7 @@ get_header(); ?>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
-		<h3>SIDEBAR MENU</h3>
+<h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
 	<div id="secondary" class="secondary">
@@ -39,7 +40,7 @@ get_header(); ?>
 				<?php } ?>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">		
+	<div class="small-12 medium-8 large-8 columns page-container">		
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>

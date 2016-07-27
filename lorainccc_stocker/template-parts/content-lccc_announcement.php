@@ -6,6 +6,7 @@
  *
  * @package lorainccc
  */
+
 ?>
 <?php 
 $whattodisplay = 'lccc_announcement';
@@ -89,30 +90,8 @@ $location = event_meta_box_get_meta('announcement_meta_box_event_location');
     <div class="small-12 medium-12 large-12 columns">
    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </div>
-	<div class="small-12 medium-2 large-2 columns">
-	<?php
-			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-                           echo '<div class="event-calendar-icon">';
-                            echo '</div>';
-							echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
-							echo '<p class="stocker-day">'.$eventstartday.'</p>';
-			echo '</div>';	
-		?>
- </div>
-	<div class="small-12 medium-10 large-10 columns nopadding">
-	<header class="entry-header">
-        <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
-        <p><?php echo 'Time: '.$starttime; ?></p>
-          <p><?php echo 'Location: '.$location; ?></p>
-	</header><!-- .entry-header -->
-	</div>
- <?php
-    if ( has_post_thumbnail() ) {
-    ?>
-    	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?>
-<?php
-    }?>
+	<div class="small-12 medium-12 large-12 columns event-image"><?php the_post_thumbnail(); ?></div>
+
 	<div class="small-12 medium-12large-12 columns content-container">
 	<div class="entry-content">
         <div class="small-12 medium-12large-12 columns nopadding">

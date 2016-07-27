@@ -15,7 +15,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
   <?php if ( is_active_sidebar( 'stocker-slider-sidebar' ) ) { ?>
-			<div class="small-12 medium-12 large-12 columns nopadding">
+			<div class="small-12 medium-12 large-12 columns slider-container nopadding">
 						<?php dynamic_sidebar( 'stocker-slider-sidebar' ); ?>
 			</div>
 			<?php }else{ ?>
@@ -25,7 +25,7 @@ get_header();
 			</div>
   </div>
   <?php } ?>
-			<section class="row">
+			<section class="row events-row">
 <?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 						<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 				<?php } ?>
@@ -46,10 +46,10 @@ get_header();
 							while ( $newstockerhighlights->have_posts() ) : $newstockerhighlights->the_post();
 						?>		
 				<div class="small-12 medium-12 large-12 columns stocker-highlight-container">
-									<div class="small-12 medium-6 large-6 columns highlight-image">
-													<?php the_post_thumbnail(); ?>
-									</div>
-									<div class="small-12 medium-6 large-6 columns highlight-text">
+				   <div class="small-12 medium-6 large-6 columns highlight-image">
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+				   </div>
+				<div class="small-12 medium-6 large-6 columns highlight-text">
 													<div class="small-12 medium-12 large-12 columns highlight-header">
 																<?php the_title('<h3>','</h3>');?>
 													</div>

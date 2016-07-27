@@ -6,9 +6,10 @@
  *
  * @package lorainccc
  */
+
 ?>
 <?php 
-$whattodisplay = 'lccc-event';
+$whattodisplay = 'lccc-events';
 				$today = getdate();
 				$currentDay = $today['mday'];
 				$month = $today['mon'];
@@ -85,36 +86,47 @@ $whattodisplay = 'lccc-event';
 		
 $location = event_meta_box_get_meta('event_meta_box_event_location');  
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
+		$bgcolor = event_meta_box_get_meta('event_meta_box_stoccker_bg_color');
+      		$ticketlink = event_meta_box_get_meta('event_meta_box_stocker_ticket_link');	
+	$eventsubheading = event_meta_box_get_meta('event_meta_box_sub_heading');	
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>">
     <div class="small-12 medium-12 large-12 columns">
-   <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+   <?php the_title( '<h1 class="entry-title indiv-event">', '</h1>' ); ?>
+			<?php
+					if( $eventsubheading != ''){
+						?>
+						<h4 class="event-sub-heading"><?php echo $eventsubheading;?> </h4>
+					<?php
+					}
+					?>
     </div>
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-                           echo '<div class="event-calendar-icon">';
-                            echo '</div>';
-							echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
-							echo '<p class="stocker-day">'.$eventstartday.'</p>';
+        echo '<div class="small-12 medium-12 large-12 columns calender">';                
+										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
+										echo '<p class="stocker-day">'.$eventstartday.'</p>';
+						echo '</div>';
 			echo '</div>';	
 		?>
  </div>
 	<div class="small-12 medium-10 large-10 columns nopadding">
 	<header class="entry-header">
-        <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
+<div class="taxonomies">
+	<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
+</div>
+        <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.' , '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
-        <p><?php echo 'Cost: '.$cost; ?></p>
-	</header><!-- .entry-header -->
+       	<?php if($cost != ''){ ?>		
+							<p><?php echo 'Cost: '.$cost; ?></p>
+							<?php } ?>
+							<?php if($ticketlink != ''){ ?>							
+								<a href="	<?php echo $ticketlink; ?>" class="buy-ticket-link">Buy Tickets</a>
+								<?php } ?>
+		</header><!-- .entry-header -->
 	</div>
- <?php
-    if ( has_post_thumbnail() ) {
-    ?>
-    	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?>
-<?php
-    }?>
 	<div class="small-12 medium-12large-12 columns content-container">
 	<div class="entry-content">
         <div class="small-12 medium-12large-12 columns nopadding">
@@ -122,8 +134,8 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 			the_content();
 ?>
         </div>
-        <div class="small-12 medium-4 large-4 columns">
-       <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Events </a>';?>
+        <div class="small-12 medium-4 large-4 columns nopadding">
+       <?php echo '<br /> <br /> <a class="button" href="'.get_post_type_archive_link( 'lccc_events' ).'">Back To All Events </a>';?>
         </div>
         <div class="small-12 medium-8 large-8 columns">
         <?php

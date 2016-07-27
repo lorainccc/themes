@@ -1,10 +1,11 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package LCCC Framework
  */
-
 get_header(); ?>
 <div class="row page-content">
 <div class="small-12 medium-12 large-12 columns breadcrumb-container">
@@ -28,33 +29,49 @@ get_header(); ?>
 				?>
 			</nav><!-- .main-navigation -->
 				<?php endif; ?>
-		</div>
+		</div> 
 		<?php endif; ?>
-				<?php if ( is_active_sidebar( 'stocker-page-events-sidebar' ) ) { ?>
-							<?php dynamic_sidebar( 'stocker-page-events-sidebar' ); ?>
-				<?php } ?>
+
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns announ-container">		
-	<div id="primary" class="content-area">
+	<div class="small-12 medium-8 large-8 columns">		
+<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="small-12 medium-12 large-12 columns  event-container">
-			<?php get_template_part( 'template-parts/content', 'lccc_announcement' );?>
-			</div>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-	if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+<?php 
+			// get the currently queried taxonomy term, for use later in the template file
+$term = get_queried_object();
+echo $term->name;
+			$args = array(
+    'post_type' => 'lccc_events',
+    'where_to_display' => $term->slug
+);
+$query = new WP_Query( $args );
+	if ($query->have_posts()) {
+         
+    // output the term name in a heading tag                
+    echo'<h2>Events to be displayed at ' . $term->name . '</h2>';
+     
+    // output the post titles in a list
+    echo '<ul>';
+     
+        // Start the Loop
+        while ( $query->have_posts() ) : $query->the_post(); ?>
+ 
+        <li class="animal-listing" id="post-<?php the_ID(); ?>">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+         
+        <?php endwhile;
+         
+        echo '</ul>';
+         
+} // end of check for query having posts
+     
+// use reset postdata to restore orginal query
+wp_reset_postdata();		
+			
 			?>
-
-		<?php endwhile; // end of the loop. ?>
-
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
